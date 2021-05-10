@@ -1,19 +1,21 @@
 <template>
-  <div id="app">
+  <div>
+    <Header/>
     <router-view/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-
-import Header from './components/Job-seeker/Header.vue';
-import Footer from './components/Job-seeker/Jobs/Footer.vue';
-import {store} from './store/store';
+import FooterMain from '../components/Job-seeker/FooterMain.vue';
+import Header from '../components/Job-seeker/Header.vue';
+import Footer from '../components/Job-seeker/Jobs/Footer.vue';
+import {store} from '../store/store';
 
 export default {
   name: 'App',
   store,
-  components: {Header, Footer},
+  components: {Header, Footer, FooterMain},
 };
 
 </script>
@@ -89,43 +91,6 @@ export default {
   height: 38px !important;
   display: flex;
   align-items: center;
-}
-
-.btn-primary {
-  background: #0385F3 !important;
-}
-
-.btn {
-  font-family: 'Open sans', sans-serif;
-}
-
-.ant-modal-content {
-  border-radius: 8px;
-}
-
-.button-class {
-  column-gap: 10px;
-}
-
-.login-button-style,
-.go-back-button-style {
-  background: #fafafa;
-  border-radius: 4px;
-  max-width: 235px;
-  width: 100%;
-  font-family: 'Open Sans', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-size: 14px;
-  color: #8b90a0;
-  height: 48px;
-  border: 1px solid #fafafa;
-}
-
-.login-button-style {
-  background: #0385f3;
-  color: #fff;
 }
 
 @import "~bootstrap/dist/css/bootstrap.css";

@@ -8,12 +8,12 @@
         </div>
       </div>
     </div>
-    <a-form layout="inline" :form="form" @submit="handleSubmit">
+    <a-form :form="form" layout="inline" @submit="handleSubmit">
       <div
-        class="row m-0"
         v-for="k in form.getFieldValue('keys')"
         :key="k"
         :required="false"
+        class="row m-0"
       >
         <div class="col-2"></div>
         <div class="col-8">
@@ -22,8 +22,6 @@
               <div class="display-flex width-100 text-align-initial">
                 <a-form-item>
                   <a-input
-                    style="width: 100%; height: 48px"
-                    class="searchbox-style width-100 mr-0"
                     v-decorator="[
                       `degree[${k}]`,
                       {
@@ -38,7 +36,9 @@
                         ],
                       },
                     ]"
+                    class="searchbox-style width-100 mr-0"
                     placeholder="Degree/ Certification"
+                    style="width: 100%; height: 48px"
                   />
                 </a-form-item>
               </div>
@@ -48,8 +48,6 @@
               <div class="display-flex width-100 text-align-initial">
                 <a-form-item>
                   <a-input
-                    style="width: 100%; height: 48px"
-                    class="searchbox-style width-100"
                     v-decorator="[
                       `college[${k}]`,
                       {
@@ -64,7 +62,9 @@
                         ],
                       },
                     ]"
+                    class="searchbox-style width-100"
                     placeholder="college"
+                    style="width: 100%; height: 48px"
                   />
                 </a-form-item>
               </div>
@@ -74,15 +74,15 @@
               <div class="display-flex width-100 text-align-initial">
                 <a-form-item>
                   <a-date-picker
-                    style="width: 100%; height: 48px"
-                    class="searchbox-style width-100"
                     v-decorator="[
                       `end_date[${k}]`,
                       {
                         validateTrigger: ['change', 'blur'],
                       },
                     ]"
+                    class="searchbox-style width-100"
                     placeholder="End date"
+                    style="width: 100%; height: 48px"
                   />
                 </a-form-item>
               </div>
@@ -92,8 +92,6 @@
               <div class="display-flex width-100 text-align-initial">
                 <a-form-item>
                   <a-date-picker
-                    style="width: 100%; height: 48px"
-                    class="searchbox-style width-100"
                     v-decorator="[
                       `start_date[${k}]`,
                       {
@@ -108,7 +106,9 @@
                         ],
                       },
                     ]"
+                    class="searchbox-style width-100"
                     placeholder="Start date"
+                    style="width: 100%; height: 48px"
                   />
                 </a-form-item>
               </div>
@@ -118,9 +118,6 @@
               <div class="display-flex width-100 text-align-initial">
                 <a-form-item>
                   <a-textarea
-                    style="width: 100%"
-                    class="searchbox-style width-100"
-                    :rows="6"
                     v-decorator="[
                       `education_detail[${k}]`,
                       {
@@ -135,7 +132,10 @@
                         ],
                       },
                     ]"
+                    :rows="6"
+                    class="searchbox-style width-100"
                     placeholder="Education detail"
+                    style="width: 100%"
                   />
                 </a-form-item>
               </div>
@@ -146,7 +146,7 @@
       <div class="row m-0">
         <div class="col-2"></div>
         <div class="col-8">
-          <hr />
+          <hr/>
         </div>
       </div>
       <div class="row m-0">
@@ -159,7 +159,8 @@
               class="text-align-center"
             >
               <a-button type="dashed add-more-text" @click="add">
-                <a-icon type="plus" /> Add more Education
+                <a-icon type="plus"/>
+                Add more Education
               </a-button>
             </a-form-item>
           </div>
@@ -171,18 +172,18 @@
           <div class="row m-0 button-class">
             <div class="mt-45px col-6"></div>
             <div class="col-6 mt-45px">
-              <a-form-item class="" v-bind="formItemLayoutWithOutLabel">
+              <a-form-item v-bind="formItemLayoutWithOutLabel" class="">
                 <a-button
+                  class="go-back-button-style mr-20"
                   type="primary"
                   @click="handlePrevious"
-                  class="go-back-button-style mr-20"
                 >
                   Go Back
                 </a-button>
                 <a-button
-                  type="primary"
-                  html-type="submit"
                   class="search-button-style"
+                  html-type="submit"
+                  type="primary"
                 >
                   Proceed
                 </a-button>
@@ -202,15 +203,16 @@
 function hasErrors(fieldsError) {
   return Object.keys(fieldsError).some((field) => fieldsError[field]);
 }
+
 let id = 0;
 export default {
-  props: ["nextStep", "previousStep"],
+  props: ['nextStep', 'previousStep'],
   data() {
     return {
       cssProps: {
-        backgroundImage: `url(${require("@/assets/Header2x.jpg")})`,
-        backgroundSize: "cover",
-        height: "inherit",
+        backgroundImage: `url(${require('@/assets/Header2x.jpg')})`,
+        backgroundSize: 'cover',
+        height: 'inherit',
       },
       hasErrors,
       //   form: this.$form.createForm(this, { name: "horizontal_login" }),
@@ -239,15 +241,15 @@ export default {
   //     });
   //   },
   beforeCreate() {
-    this.form = this.$form.createForm(this, { name: "dynamic_form_item" });
-    this.form.getFieldDecorator("keys", {
+    this.form = this.$form.createForm(this, {name: 'dynamic_form_item'});
+    this.form.getFieldDecorator('keys', {
       initialValue: [
         {
-          degree: "",
-          college: "",
-          start_date: "",
-          end_date: "",
-          education_detail: "",
+          degree: '',
+          college: '',
+          start_date: '',
+          end_date: '',
+          education_detail: '',
         },
       ],
       preserve: true,
@@ -259,27 +261,27 @@ export default {
       this.previousStep();
     },
     userNameError() {
-      const { getFieldError, isFieldTouched } = this.form;
-      return isFieldTouched("userName") && getFieldError("userName");
+      const {getFieldError, isFieldTouched} = this.form;
+      return isFieldTouched('userName') && getFieldError('userName');
     },
     // Only show error after a field is touched.
     passwordError() {
-      const { getFieldError, isFieldTouched } = this.form;
-      return isFieldTouched("password") && getFieldError("password");
+      const {getFieldError, isFieldTouched} = this.form;
+      return isFieldTouched('password') && getFieldError('password');
     },
     handleSubmit(e) {
       e.preventDefault();
       this.nextStep();
       this.form.validateFields((err, values) => {
         if (!err) {
-          console.log("Received values of form: ", values);
+          console.log('Received values of form: ', values);
         }
       });
     },
     add() {
-      const { form } = this;
+      const {form} = this;
       // can use data-binding to get
-      const keys = form.getFieldValue("keys");
+      const keys = form.getFieldValue('keys');
       const nextKeys = keys.concat(id++);
       // can use data-binding to set
       // important! notify form to detect changes
@@ -288,9 +290,9 @@ export default {
       });
     },
     remove(k) {
-      const { form } = this;
+      const {form} = this;
       // can use data-binding to get
-      const keys = form.getFieldValue("keys");
+      const keys = form.getFieldValue('keys');
       // We need at least one passenger
       if (keys.length === 1) {
         return;
@@ -309,15 +311,19 @@ export default {
 .button-class {
   text-align: end;
 }
+
 .text-align-center {
   text-align: center;
 }
+
 .text-align-initial {
   text-align: initial;
 }
+
 .text-align-end {
   text-align: end;
 }
+
 hr {
   display: block;
   height: 1px;
@@ -328,6 +334,7 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+
 .add-more-text {
   font-family: Open Sans;
   font-style: normal;
@@ -335,36 +342,47 @@ hr {
   font-size: 14px;
   color: #8b90a0;
 }
+
 .ant-calendar-picker-input {
   height: 48px;
 }
+
 .mt-30 {
   margin-top: 30px;
 }
+
 .ant-col {
   width: 100%;
 }
+
 .ant-form-item {
   width: 100%;
 }
+
 .display-flex {
   display: flex;
 }
+
 .mr-0 {
   margin-right: 0px;
 }
+
 .mr-20 {
   margin-right: 20px;
 }
+
 .width-100 {
   width: 100%;
 }
+
 .mt-45px {
   margin-top: 45px;
 }
+
 .mb-100 {
   margin-bottom: 50px;
 }
+
 .searchbox-style {
   /* width: 700px; */
   /*; */
@@ -376,6 +394,7 @@ hr {
   font-weight: 500;
   font-size: 14px;
 }
+
 .go-back-button-style {
   background: #fafafa;
   border-radius: 4px;
@@ -387,6 +406,7 @@ hr {
   color: #8b90a0;
   border: 1px solid #fafafa;
 }
+
 .profile-summary-text {
   text-align: initial;
   font-family: Open Sans;
@@ -396,6 +416,7 @@ hr {
   color: #505565;
   margin-bottom: 30px;
 }
+
 .search-button-style {
   background: #0385f3;
   border-radius: 4px;

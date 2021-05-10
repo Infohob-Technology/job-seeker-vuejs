@@ -1,14 +1,15 @@
 <template>
   <div>
-    <Homepage />
+    <Homepage/>
   </div>
 </template>
 
 <script>
-import Homepage from "./Homepage";
+import Homepage from './Homepage';
+
 export default {
-  components: { Homepage },
-  name: "HomePageContainer",
+  components: {Homepage},
+  name: 'HomePageContainer',
 };
 </script>
 
@@ -21,6 +22,7 @@ export default {
   background-color: "#FAFAFA";
   padding: 10px 10px;
 }
+
 .header a {
   float: left;
   color: black;
@@ -31,23 +33,29 @@ export default {
   line-height: 25px;
   border-radius: 5px;
 }
+
 .background-header {
   background: #fafafa;
 }
+
 .headera.logo {
   font-size: 25px;
   font-weight: bold;
 }
+
 .flex-x {
   flex: auto;
 }
+
 .header a:hover {
   /* background-color: grey; */
   color: #0385f3;
 }
+
 .bell-icon-header {
   color: #0385f3;
 }
+
 .logout-button {
   text-align: center;
   background-color: #ff4c68;
@@ -56,22 +64,27 @@ export default {
   font-size: 14px !important;
   font-weight: 600 !important;
 }
+
 .headera.active {
   background-color: green;
   color: white;
 }
+
 .header-right {
   float: right;
 }
+
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
     display: block;
     text-align: left;
   }
+
   .header-right {
     float: none;
   }
 }
+
 @import "~bootstrap/dist/css/bootstrap.css";
 </style>

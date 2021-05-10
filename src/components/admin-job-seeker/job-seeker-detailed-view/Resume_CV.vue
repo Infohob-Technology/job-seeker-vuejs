@@ -194,21 +194,19 @@
           </div>
 
           <hr class="py-2">
-          <div class="row">
-            <div class="col-10">
-
-            </div>
-            <div class="col-lg-2">
-              <button class="btn btn-primary btn-block">
-                Edit Details
-              </button>
-            </div>
+          <div class="button-class d-flex justify-content-end">
+            <a-button class="go-back-button-style" type="primary"> Cancle</a-button>
+            <a-button class="login-button-style" html-type="submit" type="primary">
+              Approve Account
+            </a-button>
           </div>
 
         </div>
 
       </div>
+
     </div>
+
   </div>
 </template>
 
@@ -224,8 +222,13 @@ export default {
   background-color: #FAFAFC;
 }
 
-.head_ {
+.text-primary {
   font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  color: #0385F3;
 }
 
 .btn-primary {

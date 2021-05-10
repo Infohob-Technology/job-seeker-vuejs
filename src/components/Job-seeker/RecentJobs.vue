@@ -1,64 +1,80 @@
 <template>
   <div class="mt-100">
-    <!-- <input type="checkbox" id="switch" class="checkbox" />
-    <label for="switch" class="toggle">
-      <p>Recent Jobs Featured Jobs</p>
-    </label> -->
-    <!-- <div class="display-flex border-ligth-grey justify-content-center">
-      <div><span>Recent jobs</span></div>
-      <div><span> Featured jobs</span></div>
-    </div> -->
+    <div class="job-type-selection mx-auto mb-5">
+      <div
+        v-for="type in types"
+        :key="type"
+        :class="{active: active === type}"
+        class="job-type"
+        @click="active=type"
+      >
+        {{ type }}
+      </div>
+    </div>
 
     <div class="mb-50">
-      <job-cards />
-      <job-cards />
-      <job-cards />
+      <job-cards/>
     </div>
   </div>
 </template>
 
 <script>
-import JobCards from "./JobCards.vue";
+import JobCards from './JobCards.vue';
+
 export default {
-  components: { JobCards },
+  components: {JobCards},
+  data() {
+    return {
+      active: 'Recent Jobs',
+      types: ['Recent Jobs', 'Featured Jobs'],
+    };
+  },
+
 };
 </script>
 
 <style scoped>
-.pading-top-20px-right-80px {
-  padding-top: 20px;
-  padding-right: 80px;
+.job-type-selection {
+  max-width: 550px;
+  width: 100%;
+  height: 70px;
+  border: 1px solid #D3D4D8;
+  border-radius: 130px;
+  display: flex;
+  flex-wrap: wrap;
+
 }
-.posted-ago-date-text {
-  font-family: SF UI Display;
+
+.job-type {
+  width: 50%;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  color: #8b90a0;
+  font-size: 24px;
+  line-height: 160%;
+  color: #8B90A0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 130px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
 }
-.border-browser-job {
-  display: table-cell;
-  vertical-align: middle;
-  border: 1px solid #0385f3;
-  box-sizing: border-box;
-  border-radius: 4px;
-  width: 160px;
-  height: 48px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  color: #505565;
+
+.job-type.active {
+  background: #0385F3;
+  color: #fff;
+
 }
-.mt-10px {
-  margin-top: 10px;
+
+.job-type.active:hover {
+  background: #0575d4;
 }
-.ml-10px {
-  margin-left: 10px;
-}
+
 .mb-50 {
   margin-bottom: 50px;
 }
+
 hr {
   display: block;
   height: 1px;
@@ -69,68 +85,11 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-.align-item-center {
-  align-items: center;
-}
-.category-box {
-  background: #fafafc;
-  border-radius: 2px;
-  padding: 10px;
-  color: #8b90a0;
-}
-.justify-content-space-around {
-  justify-content: space-around;
-}
-.job-title {
-  font-family: Larsseit;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #000000;
-}
-.display-flex {
-  display: flex;
-}
-.mt-60px {
-  margin-top: 60px;
-}
-.jobs-cards {
-  border: 1px solid #f0f1f3;
-  height: 189px;
-  border-radius: 10px;
-}
-.justify-content-center {
-  justify-content: center;
-}
-.border-ligth-grey {
-  border: 1px solid grey;
-  padding: 10px;
-}
-.toggle {
-  position: relative;
-  display: inline-block;
-  width: 400px;
-  height: 52px;
-  background-color: #ffffff;
-  border-radius: 30px;
-  border: 2px solid #e5e5e5;
-}
 
-/* After slide changes */
-.toggle:after {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 50px;
-  border-radius: 5%;
-  background-color: #0385f3;
-  top: 1px;
-  left: 1px;
-  transition: all 0.5s;
-}
 .mt-100 {
   margin-top: 100px;
 }
+
 /* Toggle text */
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -147,8 +106,17 @@ p {
   background-color: #ffffff;
 }
 
-/* Checkbox vanished */
-.checkbox {
-  display: none;
+@media only screen and (max-width: 550px) {
+  .job-type-selection {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+    border-radius: 8px
+  }
+
+  .job-type {
+    width: 100%;
+    border-radius: 8px;
+  }
 }
 </style>

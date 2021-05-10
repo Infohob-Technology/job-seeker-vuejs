@@ -10,7 +10,8 @@
         <div class="form-group">
           <div class="row my-4">
             <div class="col-6">
-              <a-input v-decorator="[
+              <a-input id="name"
+                       v-decorator="[
                           `Name`,
                           {
                             rules: [
@@ -21,11 +22,11 @@
                               },
                             ],
                           },
-                        ]"
-                       type="text" class="form-control" id="name" placeholder="Name"></a-input>
+                        ]" class="form-control" placeholder="Name" type="text"></a-input>
             </div>
             <div class="col-6">
-              <select v-decorator="[
+              <select id="email_address"
+                      v-decorator="[
                           `EmailAddress`,
                           {
                             rules: [
@@ -36,15 +37,15 @@
                               },
                             ],
                           },
-                        ]"
-                      type="text" class="form-control" id="email_address">
+                        ]" class="form-control" type="text">
                 <option value="0">Email Address</option>
               </select>
             </div>
           </div>
           <div class="row my-4">
             <div class="col-6">
-              <select v-decorator="[
+              <select id="city"
+                      v-decorator="[
                           `City`,
                           {
                             rules: [
@@ -55,13 +56,13 @@
                               },
                             ],
                           },
-                        ]"
-                      type="text" class="form-control" id="city">
+                        ]" class="form-control" type="text">
                 <option value="0">City</option>
               </select>
             </div>
             <div class="col-6">
-              <select v-decorator="[
+              <select id="country"
+                      v-decorator="[
                           `Country`,
                           {
                             rules: [
@@ -72,15 +73,15 @@
                               },
                             ],
                           },
-                        ]"
-                      type="text" class="form-control" id="country">
+                        ]" class="form-control" type="text">
                 <option value="0">Country</option>
               </select>
             </div>
           </div>
           <div class="row my-4">
             <div class="col-6">
-              <a-input v-decorator="[
+              <a-input id="mobile_number"
+                       v-decorator="[
                           `MobileNumber`,
                           {
                             rules: [
@@ -91,11 +92,11 @@
                               },
                             ],
                           },
-                        ]"
-                       type="text" class="form-control" id="mobile_number" placeholder="Mobile Number"></a-input>
+                        ]" class="form-control" placeholder="Mobile Number" type="text"></a-input>
             </div>
             <div class="col-6">
-              <a-input v-decorator="[
+              <a-input id="linked_in"
+                       v-decorator="[
                           `LinkedIn`,
                           {
                             rules: [
@@ -106,8 +107,7 @@
                               },
                             ],
                           },
-                        ]"
-                       type="text" class="form-control" id="linked_in" placeholder="Linked-In Profile URL"></a-input>
+                        ]" class="form-control" placeholder="Linked-In Profile URL" type="text"></a-input>
             </div>
           </div>
           <div class="row">
@@ -117,7 +117,8 @@
           </div>
           <div class="row my-2">
             <div class="col-4">
-              <select v-decorator="[
+              <select id="day"
+                      v-decorator="[
                           `day`,
                           {
                             rules: [
@@ -128,13 +129,13 @@
                               },
                             ],
                           },
-                        ]"
-                      class="form-control" id="day">
+                        ]" class="form-control">
                 <option value="0">Day</option>
               </select>
             </div>
             <div class="col-4">
-              <select v-decorator="[
+              <select id="month"
+                      v-decorator="[
                           `month`,
                           {
                             rules: [
@@ -145,13 +146,13 @@
                               },
                             ],
                           },
-                        ]"
-                      class="form-control" id="month">
+                        ]" class="form-control">
                 <option value="0">Month</option>
               </select>
             </div>
             <div class="col-4">
-              <select v-decorator="[
+              <select id="year"
+                      v-decorator="[
                           `year`,
                           {
                             rules: [
@@ -162,8 +163,7 @@
                               },
                             ],
                           },
-                        ]"
-                      type="text" class="form-control" id="year">
+                        ]" class="form-control" type="text">
                 <option value="0">Year</option>
               </select>
             </div>
@@ -175,7 +175,8 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <a-input v-decorator="[
+              <a-input id="nysc"
+                       v-decorator="[
                           `NYSC`,
                           {
                             rules: [
@@ -186,8 +187,8 @@
                               },
                             ],
                           },
-                        ]"
-                       type="text" class="form-control" id="nysc" placeholder="A00 - 0 - 0 - 0 - 0 - 0 - 0 - 0"></a-input>
+                        ]" class="form-control" placeholder="A00 - 0 - 0 - 0 - 0 - 0 - 0 - 0"
+                       type="text"></a-input>
             </div>
           </div>
         </div>
@@ -196,12 +197,12 @@
       <hr>
       <div class="row float-right">
         <div class="col-12">
-          <a-button class="btn btn-light mr-3 px-5">Go Back</a-button>
+          <a-button class="btn btn-light mr-3 px-5" @click="$emit('prevStep')">Go Back</a-button>
           <a-button
-            type="primary"
-            html-type="submit"
+            :disabled="hasErrors(form.getFieldsError())"
             class="login-button-style btn btn-primary px-5"
-            :disabled="hasErrors(form.getFieldsError())">
+            html-type="submit"
+            type="primary">
             Complete Profile
           </a-button>
         </div>
@@ -216,34 +217,41 @@ function hasErrors(fieldsError) {
 }
 
 export default {
-  name: "myProfile",
+  name: 'myProfile',
 
   data() {
     return {
       hasErrors,
-      form: this.$form.createForm(this, { name: "degree college endDate stratdate educationDetail" }),
+      form: this.$form.createForm(this, {name: 'degree college endDate stratdate educationDetail'}),
     };
   },
 
   methods: {
     userNameError() {
-      const { getFieldError, isFieldTouched } = this.form;
-      return isFieldTouched("userName") && getFieldError("userName");
+      const {getFieldError, isFieldTouched} = this.form;
+      return isFieldTouched('userName') && getFieldError('userName');
     },
     // Only show error after a field is touched.
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {
         if (!err) {
-          console.log("Received values of form: ", values);
+          console.log('Received values of form: ', values);
+          this.$emit('stepSuccess', values);
         }
       });
     },
   },
 
-}
+};
 </script>
 
 <style scoped>
+.form-control {
+  height: 48px;
+}
 
+.btn {
+  height: 48px
+}
 </style>

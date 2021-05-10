@@ -104,10 +104,11 @@
               </p>
             </div>
           </div>
-          <div class="row float-right py-3">
-            <div class="col-12">
-              <button class="btn btn-primary px-5">Edit Details</button>
-            </div>
+          <div class="button-class d-flex justify-content-end">
+            <a-button class="go-back-button-style" type="primary"> Cancle</a-button>
+            <a-button class="login-button-style" html-type="submit" type="primary">
+              Approve Account
+            </a-button>
           </div>
         </div>
       </div>

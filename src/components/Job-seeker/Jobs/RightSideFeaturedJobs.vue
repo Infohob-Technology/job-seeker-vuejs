@@ -4,20 +4,21 @@
       <span class="fetured-jobs-title">Featured Jobs</span>
     </div>
     <div class="mt-50">
-      <featured-jobs-cards :isNew="true" :image="`Rectangle 11 (9).png`" />
-      <featured-jobs-cards :isNew="false" :image="`Rectangle 11 (12).png`" />
-      <featured-jobs-cards :isNew="false" :image="`Rectangle 11 (13).png`" />
-      <featured-jobs-cards :isNew="false" :image="`Rectangle 11 (14).png`" />
-      <featured-jobs-cards :isNew="false" :image="`Rectangle 11 (14).png`" />
-      <featured-jobs-cards :isNew="false" :image="`Rectangle 11 (14).png`" />
+      <featured-jobs-cards :image="`Rectangle 11 (9).png`" :isNew="true"/>
+      <featured-jobs-cards :image="`Rectangle 11 (12).png`" :isNew="false"/>
+      <featured-jobs-cards :image="`Rectangle 11 (13).png`" :isNew="false"/>
+      <featured-jobs-cards :image="`Rectangle 11 (14).png`" :isNew="false"/>
+      <featured-jobs-cards :image="`Rectangle 11 (14).png`" :isNew="false"/>
+      <featured-jobs-cards :image="`Rectangle 11 (14).png`" :isNew="false"/>
     </div>
   </div>
 </template>
 
 <script>
-import FeaturedJobsCards from "./FeaturedJobsCards.vue";
+import FeaturedJobsCards from './FeaturedJobsCards.vue';
+
 export default {
-  components: { FeaturedJobsCards },
+  components: {FeaturedJobsCards},
 };
 </script>
 
@@ -29,12 +30,15 @@ export default {
   font-size: 24px;
   color: #4e4e5a;
 }
+
 .mt-60 {
   margin-top: 60px;
 }
+
 .text-align-initial {
   text-align: initial;
 }
+
 .mt-50 {
   margin-top: 50px;
 }

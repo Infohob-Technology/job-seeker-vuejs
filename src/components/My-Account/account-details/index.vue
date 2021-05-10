@@ -25,7 +25,7 @@
     </div>
     <div class="row border border-light one">
       <div class="col-3">
-        <img class="img" src="fake" alt="image">
+        <img alt="image" class="img" src="fake">
         <span class="name">Talan Bergson</span>
       </div>
       <div class="col-3">
@@ -55,7 +55,7 @@
     <div>
       <div class="row border border-light one">
         <div class="col-3">
-          <img class="img" src="fake" alt="image">
+          <img alt="image" class="img" src="fake">
           <span class="name">Ryan Torff</span>
         </div>
         <div class="col-3">
@@ -88,8 +88,8 @@
 
 <script>
 export default {
-name: "MyAccount"
-}
+  name: 'MyAccount',
+};
 </script>
 
 <style scoped>
@@ -97,37 +97,44 @@ name: "MyAccount"
   font-family: "Open Sans";
   font-style: normal;
 }
+
 .one {
   border-radius: 8px;
   padding: 10px;
 
 }
+
 .two {
   font-size: 14px;
   line-height: 24px;
 }
+
 .three {
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
 }
+
 .img {
   width: 80px;
   height: 80px;
   left: 120px;
   top: 285px;
 }
+
 .name {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
 }
+
 .double_button {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
 }
+
 .change_password {
   display: flex;
   flex-direction: row;

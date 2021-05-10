@@ -8,7 +8,7 @@
     <div class="jumbotron">
       <div class="row mb-2">
         <div class="col-12 text-center">
-          <img src="./upload.png" class="h-40 w-auto"/>
+          <img class="h-40 w-auto" src="./upload.png"/>
         </div>
       </div>
       <div class="row py-2">
@@ -25,8 +25,8 @@
     <hr>
     <div class="row float-right">
       <div class="col-12">
-        <button class="btn btn-light px-5">Go Back</button>
-        <button class="btn btn-primary px-5">Proceed</button>
+        <button class="btn btn-light px-5" @click="$emit('prevStep')">Go Back</button>
+        <button class="btn btn-primary px-5" @click="uploadFile">Proceed</button>
       </div>
     </div>
   </div>
@@ -34,8 +34,13 @@
 
 <script>
 export default {
-  name: "Documents"
-}
+  name: 'Documents',
+  methods: {
+    uploadFile() {
+      this.$emit('stepSuccess', {fileUrl: 'file url'});
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -44,11 +49,13 @@ export default {
   font-style: normal;
   font-size: 16px;
 }
+
 .support {
   font-family: Open Sans;
   font-style: normal;
   font-size: 14px;
 }
+
 .container {
   font-family: Open Sans;
   font-style: normal;

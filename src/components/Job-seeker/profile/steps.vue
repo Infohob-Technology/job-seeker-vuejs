@@ -1,69 +1,106 @@
 <template>
-  <div>
-  <div class="container-fluid">
-    <div class="row">
-    <ul class="progressbar">
-      <li :class="{ 'active' : $store.state.step == 1}">Profile Summery</li>
-      <li :class="{ 'active' : $store.state.step == 2}">Education</li>
-      <li :class="{ 'active' : $store.state.step == 3}">Experience</li>
-      <li :class="{ 'active' : $store.state.step == 4}">Projects</li>
-      <li :class="{ 'active' : $store.state.step == 5}">Documents</li>
-      <li :class="{ 'active' : $store.state.step == 6}">Key Skills</li>
-      <li :class="{ 'active' : $store.state.step == 7}">My Profile</li>
-    </ul>
+  <div class="my-profile">
+    <div class="container-fluid">
+      <div class="row">
+        <ul class="progressbar">
+          <li :class="{ 'active' : currentStep == 1}"><span>Profile Summery</span></li>
+          <li :class="{ 'active' : currentStep == 2}"><span>Education</span></li>
+          <li :class="{ 'active' : currentStep == 3}"><span>Experience</span></li>
+          <li :class="{ 'active' : currentStep == 4}"><span>Projects</span></li>
+          <li :class="{ 'active' : currentStep == 5}"><span>Documents</span></li>
+          <li :class="{ 'active' : currentStep == 6}"><span>Key Skills</span></li>
+          <li :class="{ 'active' : currentStep == 7}"><span>My Profile</span></li>
+        </ul>
+      </div>
     </div>
-  </div>
     <div class="row">
-    <div class="progression-content">
-  <section v-if="$store.state.step == 1">
-    <ProfileSummary/>
-  </section>
-  <section v-if="$store.state.step == 2">
-    <Education/>
-  </section>
-  <section v-if="$store.state.step == 3">
-    <Experience/>
-  </section>
-  <section v-if="$store.state.step == 4">
-    <Project/>
-  </section>
-  <section v-if="$store.state.step == 5">
-    <Documents/>
-  </section>
-  <section v-if="$store.state.step == 6">
-    <Skills/>
-  </section>
-  <section v-if="$store.state.step == 7">
-    <MyProfile/>
-  </section>
-    </div>
+      <div class="progression-content">
+        <section v-if="currentStep == 1">
+          <ProfileSummary @stepSuccess="stepSuccess"/>
+        </section>
+        <section v-if="currentStep == 2">
+          <Education @prevStep="prevStep" @stepSuccess="stepSuccess"/>
+        </section>
+        <section v-if="currentStep == 3">
+          <Experience @prevStep="prevStep" @stepSuccess="stepSuccess"/>
+        </section>
+        <section v-if="currentStep == 4">
+          <Project @prevStep="prevStep" @stepSuccess="stepSuccess"/>
+        </section>
+        <section v-if="currentStep == 5">
+          <Documents @prevStep="prevStep" @stepSuccess="stepSuccess"/>
+        </section>
+        <section v-if="currentStep == 6">
+          <Skills @prevStep="prevStep" @stepSuccess="stepSuccess"/>
+        </section>
+        <section v-if="currentStep == 7">
+          <MyProfile @prevStep="prevStep" @stepSuccess="stepSuccess"/>
+        </section>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import ProfileSummary from "./ProfileSummary"
-import Education from "./Education";
-import Experience from "./experience";
-import Project from "./project";
-import Documents from "./documents";
-import Skills from "./skills";
-import MyProfile from "./myProfile";
-import {store} from "../../../store/store";
+import ProfileSummary from './ProfileSummary';
+import Education from './Education';
+import Experience from './experience';
+import Project from './project';
+import Documents from './documents';
+import Skills from './skills';
+import MyProfile from './myProfile';
+import {mapGetters} from 'vuex';
 
 export default {
-  name : "Steps",
-  store,
-  components : {
-    ProfileSummary : ProfileSummary,
-    Education : Education,
-    Experience : Experience,
-    Project : Project,
-    Documents : Documents,
-    Skills : Skills,
-    MyProfile : MyProfile
-  }
-}
+  name: 'Steps',
+  data() {
+    return {
+      profileData: {},
+    };
+  },
+  components: {
+    ProfileSummary: ProfileSummary,
+    Education: Education,
+    Experience: Experience,
+    Project: Project,
+    Documents: Documents,
+    Skills: Skills,
+    MyProfile: MyProfile,
+  },
+  methods: {
+    stepSuccess(data) {
+      for (let key in data) {
+        this.profileData[key] = data[key];
+      }
+
+      if (this.currentStep == 7) {
+        this.saveProfileData();
+      } else {
+        this.nextStep();
+      }
+    },
+    nextStep() {
+
+      this.$store.dispatch('NEXT_STEP');
+    },
+    prevStep() {
+      this.$store.dispatch('PREV_STEP');
+    },
+    saveProfileData() {
+      this.$store.dispatch('SAVE_PROFILE_DATA', this.profileData);
+    },
+  },
+  computed: {
+    ...mapGetters({
+      currentStep: 'steps',
+    }),
+  },
+  watch: {
+    currentStep(newValue) {
+
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -92,7 +129,7 @@ body {
   position: relative;
   list-style: none;
   float: left;
-  width:15%;
+  width: 15%;
   text-align: center;
 }
 
@@ -102,7 +139,7 @@ body {
   counter-increment: step;
   width: 40px;
   height: 40px;
-  border: 1px solid ;
+  border: 1px solid;
   display: block;
   text-align: center;
   margin: 0 auto 10px auto;
@@ -112,11 +149,13 @@ body {
   /* Center # in circle */
   line-height: 39px;
 }
-.progression-content{
+
+.progression-content {
   width: 100%;
   margin-top: 50px;
   padding-bottom: 50px;
 }
+
 .progressbar li:after {
   content: "";
   position: absolute;
@@ -144,5 +183,23 @@ body {
   /*   background:  #00E676; */
   /*   border-bottom: 1px dashed */
   /*border-color: #00E676;*/
+}
+
+@media only screen and (max-width: 767px) {
+  .progressbar {
+    padding-left: 0;
+  }
+
+  .progressbar li span {
+    display: none;
+  }
+
+  .progressbar li.active span {
+    display: block;
+  }
+
+  .my-profile {
+    padding: 0 15px;
+  }
 }
 </style>

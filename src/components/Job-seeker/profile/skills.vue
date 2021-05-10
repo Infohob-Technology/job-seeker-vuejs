@@ -10,6 +10,7 @@
         <div class="row mt-2">
           <div class="col-md-6">
             <a-input
+              id="search"
               v-decorator="[
                 `Skill`,
                 {
@@ -21,18 +22,18 @@
                 },
                        ],
                 },
-                      ]"
-              type="text" class="form-control one" id="search" placeholder="Type in to Search or add new">
+                      ]" class="form-control one" placeholder="Type in to Search or add new" type="text">
             </a-input>
           </div>
         </div>
         <div class="row mt-2">
           <div class="col-12">
             <a-select
-              mode="multiple"
               :default-value="['C', 'C++']"
-              style="width: 100%"
+              class="dropdown-select"
+              mode="multiple"
               placeholder="Please select"
+              style="width: 100%"
               @change="handleChange"
             >
               <a-select-option v-for="i in 25" :key="(i + 9).toString(36) + i">
@@ -45,11 +46,11 @@
       <hr>
       <div class="row float-right buttonss">
         <div class="col-sm-12">
-          <button class="btn btn-light px-5">Go Back</button>
-          <button type="primary"
-                  html-type="submit"
+          <button class="btn btn-light px-5" @click="$emit('prevStep')">Go Back</button>
+          <button :disabled="hasErrors(form.getFieldsError())"
                   class="login-button-style btn btn-primary px-5"
-                  :disabled="hasErrors(form.getFieldsError())">
+                  html-type="submit"
+                  type="primary">
             Proceed
           </button>
         </div>
@@ -64,25 +65,26 @@ function hasErrors(fieldsError) {
 }
 
 export default {
-  name: "Skills",
+  name: 'Skills',
   data() {
     return {
       hasErrors,
-      form: this.$form.createForm(this, { name: "Skill" }),
+      form: this.$form.createForm(this, {name: 'Skill'}),
     };
   },
 
   methods: {
     userNameError() {
-      const { getFieldError, isFieldTouched } = this.form;
-      return isFieldTouched("userName") && getFieldError("userName");
+      const {getFieldError, isFieldTouched} = this.form;
+      return isFieldTouched('userName') && getFieldError('userName');
     },
     // Only show error after a field is touched.
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {
         if (!err) {
-          console.log("Received values of form: ", values);
+          console.log('Received values of form: ', values);
+          this.$emit('stepSuccess', values);
         }
       });
     },
@@ -91,22 +93,30 @@ export default {
     },
   },
 
-}
+};
 </script>
 
 <style scoped>
 h4 {
   font-size: 18px;
 }
+
 .container {
   font-family: Open Sans;
 }
+
 .buttonss {
   font-size: 14px;
 }
+
+.form-control {
+  height: 48px;
+}
+
 .close_button {
   border-radius: 4px;
 }
+
 .one {
   border-radius: 4px;
 }
