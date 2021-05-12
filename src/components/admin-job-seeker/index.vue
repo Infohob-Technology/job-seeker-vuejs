@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid main-div-height-job-seeker-list">
-    <div class="text-align-right mt-50">
-      <a-button type="solid add-more-text-admin-job-seeker">
+    <div class="d-flex justify-content-end text-align-right mt-50">
+      <a-button type="solid add-more-text-admin-job-seeker" @click="showAddSekeer=true">
         <span
         ><a-icon class="vertical-align-middle" type="plus"/> Add New Job
           Seeker</span
@@ -175,11 +175,53 @@
           </div>
         </a-table>
       </a-tab-pane>
-      <a-tab-pane key="2" tab="Settings"> Content of tab 2</a-tab-pane>
+      <a-tab-pane key="2" tab="Settings">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="settings">
+            <h4>Do we need administrator approval for Jobseeker account ?</h4>
+            <div class="row mb-3">
+              <div class="col-6">
+                <label class="settings-label">
+                  <input type="radio" name="setting" value="yes">
+                  Yes
+                </label>
+              </div>
+              <div class="col-6">
+                <label class="settings-label">
+                  <input type="radio" name="setting" value="no">
+                  No
+                </label>
+              </div>
+            </div>
+
+
+
+           <div class="row p-0">
+             <div class="col-6">
+               <button class="btn btn-light btn-block" >
+                 Cancel
+               </button>
+             </div>
+             <div class="col-6">
+
+               <button class="btn btn-primary btn-block">
+                 Apply
+               </button>
+
+             </div>
+           </div>
+
+          </div>
+        </div>
+      </div>
+      </a-tab-pane>
     </a-tabs>
+    <AddJobSeeker :visible="showAddSekeer" @closeMe="showAddSekeer=false" />
   </div>
 </template>
 <script>
+import AddJobSeeker from './AddJobSeeker'
 const columns = [
   {
     dataIndex: 'name',
@@ -439,12 +481,17 @@ export default {
         showTotal: (total) => `Total ${total} items`, // show total
         showSizeChange: (current, pageSize) => (this.pageSize = pageSize), // update display when changing the number of pages per page
       },
+      showAddSekeer: false
     };
+  },
+  components: {
+    AddJobSeeker
   },
   methods: {
     displayDetailed() {
       this.$router.push('/admin/job-seeker/10');
     },
+
   },
 };
 </script>
@@ -461,6 +508,7 @@ export default {
   border-radius: 4px;
   align-items: center;
   color: #ffffff;
+  height: 48px;
 }
 
 .table-header-title {
@@ -520,8 +568,29 @@ export default {
   vertical-align: middle;
 }
 
+.settings h4{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+.settings-label{
+  height: 52px;
+  width: 100%;
+  background: rgba(90, 170, 223, 0.04);
+  border: 1px solid #5AAADF;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  column-gap: 10px;
+}
+.btn-block{
+  height: 48px;
+}
 .no-of-total-category {
-  font-family: Open Sans;
+  font-family: 'Open Sans',sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -591,5 +660,11 @@ th {
 
 .ant-table-row-cell-last {
   min-width: 150px !important;
+}
+@media (max-width: 768px){
+  .container-fluid{
+    padding-left: 20px;
+    padding-right: 20px
+  }
 }
 </style>

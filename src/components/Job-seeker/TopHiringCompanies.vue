@@ -110,34 +110,18 @@ hr {
   color: #000000;
 }
 
-.display-flex {
-  display: flex;
-}
-
-.mt-60px {
-  margin-top: 60px;
-}
-
-.jobs-cards {
-  border: 1px solid #f0f1f3;
-  height: 189px;
-  border-radius: 10px;
-}
 
 .background-color-light {
   background: #f5faff;
 }
 
-.justify-content-center {
-  justify-content: center;
-}
-
-.border-ligth-grey {
-  border: 1px solid grey;
-  padding: 10px;
-}
-
-.mt-100 {
-  margin-top: 100px;
+@media (max-width: 768px){
+  .mt-110{
+    margin-top: 40px;
+  }
+  .label-top-hiring-companie{
+    font-size: 36px;
+    line-height: 1.2;
+  }
 }
 </style>

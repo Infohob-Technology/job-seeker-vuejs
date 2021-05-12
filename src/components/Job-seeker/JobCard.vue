@@ -6,7 +6,7 @@
         <img src="../../assets/Rectangle 11.png"/>
       </div>
       <div>
-        <div class="mt-2 mt-sm-0 d-flex"><span class="job-title">Front-end Developer</span></div>
+        <div class="mt-2 mt-sm-0 d-flex justify-content-sm-start justify-content-center"><span class="job-title">Front-end Developer</span></div>
         <div class="display-flex mt-10px">
           <div class="category-box"><span>Web Development</span></div>
           <div class="category-box ml-10px">

@@ -6,7 +6,6 @@
         <a href="#jobs">Terms & Conditions</a>
         <a href="#my-application">Privacy Policy</a>
         <a href="#my-account">Blog</a>
-        <a href="#my-account">Blog</a>
         <a href="#my-account">Reviews</a>
         <a href="#my-account">Careers</a>
         <a href="#my-account">Contact us</a>
