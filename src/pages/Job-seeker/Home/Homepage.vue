@@ -2,7 +2,7 @@
   <div class="main-div">
     <!--    <div class="bg-image">-->
     <div class="container-fluid">
-      <left-side-back/>
+      <Hero/>
       <recent-jobs/>
       <top-hiring-companies/>
       <talent-opportunity/>
@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import FooterCard from './Job-seeker/FooterCard.vue';
-import LeftSideBack from './Job-seeker/LeftSide-Back.vue';
-import RecentJobs from './Job-seeker/RecentJobs.vue';
-import TalentOpportunity from './Job-seeker/TalentOpportunity.vue';
-import TopHiringCompanies from './Job-seeker/TopHiringCompanies.vue';
+import FooterCard from './FooterCard.vue';
+import Hero from './Hero.vue';
+import RecentJobs from './RecentJobs.vue';
+import TalentOpportunity from './TalentOpportunity.vue';
+import TopHiringCompanies from './TopHiringCompanies.vue';
 
 export default {
   components: {
-    LeftSideBack,
+    Hero,
     RecentJobs,
     TopHiringCompanies,
     TalentOpportunity,

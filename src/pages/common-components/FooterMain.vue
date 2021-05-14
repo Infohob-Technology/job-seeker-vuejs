@@ -1,11 +1,11 @@
 <template>
-  <div class="background-footer container-fluid padding-20px">
+  <div class="background-footer">
     <div
       class="footer-main display-flex flex-column flex-sm-row justify-content-space-between align-item-center"
     >
       <div class="mb-2 mb-sm-0">
         <div>
-          <img src="../../assets/Vector (1).png"/>
+          <img src="@/assets/logo-red.png"/>
         </div>
         <div class="">
           <span class="logo-font-footer"> Infohob </span>
@@ -16,16 +16,16 @@
       </div>
       <div class="display-flex justify-content-space-between">
         <div class="border-box-images">
-          <img src="../../assets/Shape.png"/>
+          <img src="@/assets/fb.png"/>
         </div>
         <div class="border-box-images">
-          <img src="../../assets/Shape (1).png"/>
+          <img src="@/assets/insta.png"/>
         </div>
         <div class="border-box-images background-color-instagram">
-          <img src="../../assets/Shape (1).png"/>
+          <img src="@/assets/pinterst.png"/>
         </div>
         <div class="border-box-images">
-          <img src="../../assets/Shape (2).png"/>
+          <img src="@/assets/twitter.png"/>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {};
 }
 
 .footer-main {
-  padding: 10px 10px;
+  padding: 20px 115px;
 }
 
 .logo-font-footer {
@@ -119,6 +119,11 @@ export default {};
   .border-box-images {
     padding: 2px;
     margin-right: 3px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer-main {
+    padding: 10px 16px
   }
 }
 </style>

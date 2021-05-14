@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import JobCards from './JobCards.vue';
+import JobCards from '../../common-components/JobCards.vue';
 import TopHiringCompaniesCards from './TopHiringCompaniesCards.vue';
 
 export default {

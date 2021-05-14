@@ -19,62 +19,39 @@
         </span>
       </div>
     </div>
-    <div
-      v-if="toggleCat"
-      class="category expand-transition"
-      transition="expand"
-    >
-      <a-checkbox-group @change="onChange">
-        <a-row>
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >Industry A
-            </a-checkbox
+    <transition name="expand" mode="out-in">
+      <div
+        v-if="toggleCat"
+        class="category expand-transition"
+        :style="{'height': ((compIndustries.length*40)+80)+'px'}"
+
+      >
+        <a-checkbox-group @change="onChange">
+          <a-row>
+            <a-col v-for="item in compIndustries" :key="item.value"
+                   :span="24"
+                   class="text-align-initial"
             >
-          </a-col
-          >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >Industry B
-            </a-checkbox
+              <a-checkbox
+                :value="item.value"
+                class="text-align-initial checkbox-color mt-10"
+              >{{ item.name }}
+              </a-checkbox
+              >
+            </a-col
             >
-          </a-col
-          >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >Industry C
-            </a-checkbox
-            >
-          </a-col
-          >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >Industry D
-            </a-checkbox
-            >
-          </a-col
-          >
-        </a-row>
-      </a-checkbox-group>
-      <div class="text-align-initial ptb-20">
-        <span class="more-plus">+20 More</span>
+          </a-row>
+        </a-checkbox-group>
+        <div class="text-align-initial ptb-20" v-if="industries.length>showItems">
+          <span class="more-plus" v-if="!showAllIndustries" @click="showAllIndustries=true">+{{ industries.length-showItems }} More</span>
+          <span class="more-plus" v-else @click="showAllIndustries=false">-Show less</span>
+        </div>
+        <div class="ml-10px">
+          <hr/>
+        </div>
       </div>
-      <div class="ml-10px">
-        <hr/>
-      </div>
-    </div>
+    </transition>
+
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
       v-on:click="toggleSalary()"
@@ -86,62 +63,37 @@
         </span>
       </div>
     </div>
+    <transition name="expand" mode="out-in">
     <div
       v-if="toggleSalaryOpt"
       class="category expand-transition"
-      transition="expand"
+      :style="{'height': ((compSalaries.length*40)+80)+'px'}"
     >
       <a-checkbox-group @change="onChange">
         <a-row>
           <a-col :span="24" class="text-align-initial"
+                 v-for="item in compSalaries"
+                 :key="item.value"
           >
             <a-checkbox
               class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >0-2 Lakh ₦ (200)
-            </a-checkbox
-            >
-          </a-col
-          >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >2-5 Lakh ₦(96)
-            </a-checkbox
-            >
-          </a-col
-          >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >5-8 Lakh ₦(15)
-            </a-checkbox
-            >
-          </a-col
-          >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >8-12 Lakh ₦ (12)
+              :value="item.name"
+            >{{ item.name }}
             </a-checkbox
             >
           </a-col
           >
         </a-row>
       </a-checkbox-group>
-      <div class="text-align-initial ptb-20">
-        <span class="more-plus">+20 More</span>
+      <div class="text-align-initial ptb-20" v-if="salaries.length>showItems">
+        <span class="more-plus" v-if="!showAllSalaries" @click="showAllSalaries=true">+{{ salaries.length-showItems }} More</span>
+        <span class="more-plus" v-else @click="showAllSalaries=false">-Show less</span>
       </div>
       <div class="ml-10px">
         <hr/>
       </div>
     </div>
+    </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
       v-on:click="toggleExperience()"
@@ -153,6 +105,7 @@
         </span>
       </div>
     </div>
+    <transition name="expand" mode="out-in">
     <div
       v-if="toggleExperienceOpt"
       class="experience-block expand-transition"
@@ -171,6 +124,7 @@
         <hr/>
       </div>
     </div>
+    </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
       v-on:click="toggleLocation()"
@@ -182,6 +136,7 @@
         </span>
       </div>
     </div>
+    <transition name="expand" mode="out-in">
     <div
       v-if="toggleLocationOpt"
       class="location-box expand-transition"
@@ -206,6 +161,7 @@
         <hr/>
       </div>
     </div>
+    </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
       v-on:click="toggleTimePosted()"
@@ -217,6 +173,7 @@
         </span>
       </div>
     </div>
+    <transition name="expand" mode="out-in">
     <div
       v-if="toggleTimePostedOpt"
       class="time-posted-block expand-transition"
@@ -235,6 +192,7 @@
         <hr/>
       </div>
     </div>
+    </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
       v-on:click="toggleCompanySize()"
@@ -246,73 +204,50 @@
         </span>
       </div>
     </div>
+    <transition name="expand" mode="out-in">
     <div
       v-if="toggleCompanySizeOpt"
       class="category expand-transition"
-      transition="expand"
+      :style="{'height': ((compSize.length*40)+80)+'px'}"
     >
       <a-checkbox-group @change="onChangeCompanySize">
         <a-row>
           <a-col :span="24" class="text-align-initial"
+                 v-for="item in compSize"
+                 :key="item.value"
           >
             <a-checkbox
               class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >5-50 Employees
+              :value="item.value"
+            >{{ item.name }}
             </a-checkbox
             >
           </a-col
           >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >50-80 Employees
-            </a-checkbox
-            >
-          </a-col
-          >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >80-120 Employees
-            </a-checkbox
-            >
-          </a-col
-          >
-          <a-col :span="24" class="text-align-initial"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              value="A"
-            >120-400 Employees
-            </a-checkbox
-            >
-          </a-col
-          >
+
         </a-row>
       </a-checkbox-group>
-      <div class="text-align-initial ptb-20">
-        <span class="more-plus">+5 More</span>
+      <div class="text-align-initial ptb-20" v-if="sizeCompany.length>showItems">
+        <span class="more-plus" v-if="!showAllSize" @click="showAllSize=true">+{{ sizeCompany.length-showItems }} More</span>
+        <span class="more-plus" v-else @click="showAllSize=false">-Show less</span>
       </div>
       <div class="ml-10px">
         <hr/>
       </div>
     </div>
+    </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
       v-on:click="toggleJobType()"
     >
-      <div><span class="industry-title-text">Company size</span></div>
+      <div><span class="industry-title-text">Job Type</span></div>
       <div>
         <span class="no-of-filters-apply-text"
         ><img alt="" src="../../../assets/Vector (3).png"/>
         </span>
       </div>
     </div>
+    <transition name="expand" mode="out-in">
     <div
       v-if="toggleJobTypeOpt"
       class="company-size-block expand-transition"
@@ -350,6 +285,7 @@
         >
       </div>
     </div>
+    </transition>
   </div>
 </template>
 
@@ -373,6 +309,77 @@ export default {
       valueLocation: 1,
       valueLocationSlider: 500,
       valueTimePosted: 5,
+      industries: [
+        {
+          name: 'Industry A',
+          value: 'A',
+        }, {
+          name: 'Industry B',
+          value: 'B',
+        }, {
+          name: 'Industry c',
+          value: 'c',
+        }, {
+          name: 'Industry D',
+          value: 'D',
+        }, {
+          name: 'Industry E',
+          value: 'E',
+        }, {
+          name: 'Industry F',
+          value: 'F',
+        }, {
+          name: 'Industry G',
+          value: 'G',
+        }, {
+          name: 'Industry H',
+          value: 'H',
+        },
+      ],
+      showAllIndustries: false,
+      salaries: [
+        {
+          value: '0-2',
+          name: '0-2 Lakh ₦ (200)'
+        },
+        {
+          value: '2-5',
+          name: '2-5 Lakh ₦ (200)'
+        },
+        {
+          value: '5-7',
+          name: '5-7 Lakh ₦ (200)'
+        },
+        {
+          value: '7-9',
+          name: '7-9 Lakh ₦ (200)'
+        },
+        {
+          value: '9-12',
+          name: '9-12 Lakh ₦ (200)'
+        },
+        {
+          value: '12-14',
+          name: '12-14 Lakh ₦ (200)'
+        },
+        {
+          value: '14-16',
+          name: '14-16 Lakh ₦ (200)'
+        },
+
+      ],
+      showAllSalaries: false,
+      sizeCompany: [
+        {name: '5-50 Employees', value: '5-50'},
+        {name: '50-100 Employees', value: '50-100'},
+        {name: '100-150 Employees', value: '100-150'},
+        {name: '150-200 Employees', value: '150-200'},
+        {name: '200-250 Employees', value: '200-250'},
+        {name: '250-300 Employees', value: '250-300'},
+        {name: '300-500 Employees', value: '300-500'},
+      ],
+      showAllSize: false,
+      showItems: 4,
       marksLocationSlider: {
         1: {
           style: {
@@ -499,6 +506,17 @@ export default {
       this.valueTimePosted = value;
     },
   },
+  computed: {
+    compIndustries() {
+      return this.showAllIndustries ? [...this.industries] : [...this.industries].splice(0, this.showItems);
+    },
+    compSalaries() {
+      return this.showAllSalaries ? [...this.salaries] : [...this.salaries].splice(0, this.showItems);
+    },
+    compSize() {
+      return this.showAllSize ? [...this.sizeCompany] : [...this.sizeCompany].splice(0, this.showItems);
+    },
+  },
 };
 </script>
 
@@ -595,7 +613,7 @@ export default {
 }
 
 .padding-slider {
-  padding: 0px 0px 45px 0px;
+  padding: 0px 0px 45px 15px;
 }
 
 .padding-slider-time-posted {
@@ -607,12 +625,12 @@ export default {
 }
 
 .more-plus {
-  font-family: Open Sans;
+  font-family: 'Open Sans',sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
+  cursor: pointer;
 
   text-align: center;
   text-decoration-line: underline;
@@ -633,6 +651,7 @@ hr {
 
 .pt-30 {
   padding-top: 30px;
+
 }
 
 .ptb-20 {
@@ -657,7 +676,7 @@ hr {
 }
 
 .industry-title-text {
-  font-family: Open Sans;
+  font-family: 'Open Sans',sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -685,7 +704,7 @@ hr {
 }
 
 .no-of-filters-apply-text {
-  font-family: Open Sans;
+  font-family: 'Open Sans',sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -727,16 +746,11 @@ hr {
 }
 
 .expand-transition {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-/* .expand-enter defines the starting state for entering */
-/* .expand-leave defines the ending state for leaving */
-.expand-enter,
-.expand-leave {
-  height: 0;
-  opacity: 0;
-}
+
 
 .cursor-pointer {
   cursor: pointer;
@@ -775,5 +789,16 @@ hr {
   .background-left-side-menu.opened {
     display: block
   }
+}
+.expand-enter-active,
+.expand-leave-active {
+  transition: all 0.3s ease-in-out;
+  max-height: 230px;
+}
+.expand-enter,
+.expand-leave-to {
+  opacity: 0;
+  max-height: 0px;
+  overflow: hidden;
 }
 </style>

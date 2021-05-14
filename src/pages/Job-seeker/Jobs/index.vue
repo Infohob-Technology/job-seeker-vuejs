@@ -22,7 +22,7 @@
 
 <script>
 import Footer from './Footer';
-import Header from '../Header.vue';
+import Header from '../../common-components/Header.vue';
 import LeftSideMenu from './LeftSideFilterMenu';
 import RightSideFeaturedJobs from './RightSideFeaturedJobs.vue';
 import MiddleJobsSection from './MiddleJobsSection.vue';

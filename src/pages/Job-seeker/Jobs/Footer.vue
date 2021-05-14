@@ -18,7 +18,7 @@
       >
         <div>
           <div>
-            <img src="../../../assets/Vector (1).png"/>
+            <img src="../../../assets/logo-red.png"/>
           </div>
           <div class="">
             <span class="logo-font-footer"> Infohob</span>
@@ -29,16 +29,16 @@
         </div>
         <div class="display-flex justify-content-space-between mr-50px ">
           <div class="border-box-images">
-            <img src="../../../assets/Shape.png"/>
+            <img src="../../../assets/fb.png"/>
           </div>
           <div class="border-box-images">
-            <img src="../../../assets/Shape (1).png"/>
+            <img src="../../../assets/insta.png"/>
           </div>
           <div class="border-box-images background-color-instagram">
-            <img src="../../../assets/Shape (1).png"/>
+            <img src="../../../assets/pinterst.png"/>
           </div>
           <div class="border-box-images">
-            <img src="../../../assets/Shape (2).png"/>
+            <img src="../../../assets/twitter.png"/>
           </div>
         </div>
       </div>
@@ -47,10 +47,10 @@
 </template>
 
 <script>
-import FooterMain from './../FooterMain.vue';
+// import FooterMain from '../FooterMain.vue';
 
 export default {
-  components: {FooterMain},
+  // components: {FooterMain},
 };
 </script>
 

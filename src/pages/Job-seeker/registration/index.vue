@@ -64,11 +64,11 @@
 <script>
 import Footer from './Footer';
 import ProfileSummary from './ProfileSummary';
-import Header from '../Header.vue';
+import Header from '../../common-components/Header.vue';
 import EducationDetails from './EducationDetails.vue';
 import ExperienceDetails from './ExperienceDetails.vue';
 import Projects from './Projects.vue';
-import Documents from '../Documents.vue';
+import Documents from './Documents.vue';
 import KeySkills from './KeySkills.vue';
 import PersonalInfo from './PersonalInfo.vue';
 

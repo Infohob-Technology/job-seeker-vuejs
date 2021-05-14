@@ -13,7 +13,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-2 text-left mt-2 mb-2">
-                <img height="80" src="./google-icon.png" width="78"/>
+                <img height="80" src="google-icon.png" width="78"/>
               </div>
               <div class="col-md-10">
                 <div class="row " style="display:flex">
@@ -26,15 +26,15 @@
                 </div>
                 <div class="flex-items row">
                   <div class="item mr-3">
-                    <img alt="map pin" class="mr-1" src="./map-pin.svg">
+                    <img alt="map pin" class="mr-1" src="map-pin.svg">
                     <span class="text-black-50"> Abuja , Nigeria</span>
                   </div>
                   <div class="item">
-                    <img alt="map pin" class="mr-1" src="./clock.svg">
+                    <img alt="map pin" class="mr-1" src="clock.svg">
                     <span class="text-black-50"> 2 Hours Ago</span>
                   </div>
                   <div class="item">
-                    <img alt="map pin" class="mr-1" src="./dollar-sign.svg">
+                    <img alt="map pin" class="mr-1" src="dollar-sign.svg">
                     <span class="text-black-50"> 2000 - 6000</span>
                   </div>
                 </div>
@@ -208,7 +208,7 @@
               <template v-else>
                 <div>
                   <div>
-                    <img height="60" src="./upload.png" width="60"/>
+                    <img height="60" src="upload.png" width="60"/>
                   </div>
                 </div>
                 <div class="row">
@@ -247,18 +247,18 @@
              style="color: #00C87A;text-decoration:underline;font-weight:600">Career@gmail.com</a>
 
           <div class=" mt-4" style="display:flex">
-            <div class="btn_menu text-center"><img class="mr-1" src="./share.svg"/> Share</div>
-            <div class="btn_menu text-center ml-3"><img class="mr-1" src="./tweeter.svg"/> Tweet</div>
-            <div class="btn_menu text-center ml-3"><img class="mr-1" src="./save.svg"/> Save</div>
+            <div class="btn_menu text-center"><img class="mr-1" src="share.svg"/> Share</div>
+            <div class="btn_menu text-center ml-3"><img class="mr-1" src="tweeter.svg"/> Tweet</div>
+            <div class="btn_menu text-center ml-3"><img class="mr-1" src="save.svg"/> Save</div>
           </div>
           <h3 class="description_heading mt-5" style="font-size: 24px">Jobs you might be interested in</h3>
 
           <div class="card mt-4 p-3">
 
-            <h5 class="card_heading"><img alt="Image" src="./globe.svg"/> Front-end Developer </h5>
+            <h5 class="card_heading"><img alt="Image" src="globe.svg"/> Front-end Developer </h5>
             <div class="mt-3" style="display: flex; margin: auto">
-              <p class="card_text"><img class="mr-2" src="./map-pin-light.svg"/> Abuja , Nigeria</p>
-              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="./dollar-sign-light.svg"/> 2000 -
+              <p class="card_text"><img class="mr-2" src="map-pin-light.svg"/> Abuja , Nigeria</p>
+              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="dollar-sign-light.svg"/> 2000 -
                 6000</p>
 
             </div>
@@ -266,31 +266,20 @@
 
           <div class="card mt-4 p-3">
 
-            <h5 class="card_heading"><img alt="Image" src="./globe.svg"/> Front-end Developer </h5>
+            <h5 class="card_heading"><img alt="Image" src="globe.svg"/> Front-end Developer </h5>
             <div class="mt-3" style="display: flex; margin: auto">
-              <p class="card_text"><img class="mr-2" src="./map-pin-light.svg"/> Abuja , Nigeria</p>
-              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="./dollar-sign-light.svg"/> 2000 -
+              <p class="card_text"><img class="mr-2" src="map-pin-light.svg"/> Abuja , Nigeria</p>
+              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="dollar-sign-light.svg"/> 2000 -
                 6000</p>
 
             </div>
           </div>
           <div class="card mt-4 p-3">
 
-            <h5 class="card_heading"><img alt="Image" src="./globe.svg"/> Front-end Developer </h5>
+            <h5 class="card_heading"><img alt="Image" src="globe.svg"/> Front-end Developer </h5>
             <div class="mt-3" style="display: flex; margin: auto">
-              <p class="card_text"><img class="mr-2" src="./map-pin-light.svg"/> Abuja , Nigeria</p>
-              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="./dollar-sign-light.svg"/> 2000 -
-                6000</p>
-
-            </div>
-          </div>
-
-          <div class="card mt-4 p-3">
-
-            <h5 class="card_heading"><img alt="Image" src="./globe.svg"/> Front-end Developer </h5>
-            <div class="mt-3" style="display: flex; margin: auto">
-              <p class="card_text"><img class="mr-2" src="./map-pin-light.svg"/> Abuja , Nigeria</p>
-              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="./dollar-sign-light.svg"/> 2000 -
+              <p class="card_text"><img class="mr-2" src="map-pin-light.svg"/> Abuja , Nigeria</p>
+              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="dollar-sign-light.svg"/> 2000 -
                 6000</p>
 
             </div>
@@ -298,40 +287,51 @@
 
           <div class="card mt-4 p-3">
 
-            <h5 class="card_heading"><img alt="Image" src="./globe.svg"/> Front-end Developer </h5>
+            <h5 class="card_heading"><img alt="Image" src="globe.svg"/> Front-end Developer </h5>
             <div class="mt-3" style="display: flex; margin: auto">
-              <p class="card_text"><img class="mr-2" src="./map-pin-light.svg"/> Abuja , Nigeria</p>
-              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="./dollar-sign-light.svg"/> 2000 -
+              <p class="card_text"><img class="mr-2" src="map-pin-light.svg"/> Abuja , Nigeria</p>
+              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="dollar-sign-light.svg"/> 2000 -
+                6000</p>
+
+            </div>
+          </div>
+
+          <div class="card mt-4 p-3">
+
+            <h5 class="card_heading"><img alt="Image" src="globe.svg"/> Front-end Developer </h5>
+            <div class="mt-3" style="display: flex; margin: auto">
+              <p class="card_text"><img class="mr-2" src="map-pin-light.svg"/> Abuja , Nigeria</p>
+              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="dollar-sign-light.svg"/> 2000 -
                 6000</p>
 
             </div>
           </div>
           <div class="card mt-4 p-3">
 
-            <h5 class="card_heading"><img alt="Image" src="./globe.svg"/> Front-end Developer </h5>
+            <h5 class="card_heading"><img alt="Image" src="globe.svg"/> Front-end Developer </h5>
             <div class="mt-3" style="display: flex; margin: auto">
-              <p class="card_text"><img class="mr-2" src="./map-pin-light.svg"/> Abuja , Nigeria</p>
-              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="./dollar-sign-light.svg"/> 2000 -
+              <p class="card_text"><img class="mr-2" src="map-pin-light.svg"/> Abuja , Nigeria</p>
+              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="dollar-sign-light.svg"/> 2000 -
                 6000</p>
 
             </div>
           </div>
           <div class="card mt-4 p-3">
 
-            <h5 class="card_heading"><img alt="Image" src="./globe.svg"/> Front-end Developer </h5>
+            <h5 class="card_heading"><img alt="Image" src="globe.svg"/> Front-end Developer </h5>
             <div class="mt-3" style="display: flex; margin: auto">
-              <p class="card_text"><img class="mr-2" src="./map-pin-light.svg"/> Abuja , Nigeria</p>
-              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="./dollar-sign-light.svg"/> 2000 -
+              <p class="card_text"><img class="mr-2" src="map-pin-light.svg"/> Abuja , Nigeria</p>
+              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="dollar-sign-light.svg"/> 2000 -
                 6000</p>
 
             </div>
           </div>
           <div class="card mt-4 p-3">
 
-            <h5 class="card_heading"><img alt="Image" src="./globe.svg"/> Front-end Developer </h5>
+            <h5 class="card_heading"><img alt="Image" src="globe.svg"/> Front-end Developer </h5>
             <div class="mt-3" style="display: flex; margin: auto">
-              <p class="card_text"><img class="mr-2" src="./map-pin-light.svg"/> Abuja , Nigeria</p>
-              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="./dollar-sign-light.svg"/> 2000 -
+              <p class="card_text"><img class="mr-2" src="map-pin-light.svg"/> Abuja , Nigeria</p>
+              <p class="card_text" style="margin-left: 40px "><img class="mr-2" src="dollar-sign-light.svg"/> 2000 -
                 6000</p>
 
             </div>
@@ -347,7 +347,7 @@
 </template>
 <script>
 
-import Footer from '../../../components/Job-seeker/Jobs/Footer.vue';
+import Footer from '../../Jobs/Footer.vue';
 import Modal from './modal';
 
 export default {

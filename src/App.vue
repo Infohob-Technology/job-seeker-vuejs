@@ -6,8 +6,8 @@
 
 <script>
 
-import Header from './components/Job-seeker/Header.vue';
-import Footer from './components/Job-seeker/Jobs/Footer.vue';
+import Header from './pages/common-components/Header.vue';
+import Footer from './pages/Job-seeker/Jobs/Footer.vue';
 import {store} from './store/store';
 
 export default {

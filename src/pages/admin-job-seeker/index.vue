@@ -664,7 +664,7 @@ th {
 @media (max-width: 768px){
   .container-fluid{
     padding-left: 20px;
-    padding-right: 20px
+    padding-right:   20px
   }
 }
 </style>

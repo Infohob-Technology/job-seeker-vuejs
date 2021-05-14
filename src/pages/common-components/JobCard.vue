@@ -3,7 +3,7 @@
     <div
       class="display-flex flex-column flex-sm-row pading-top-20px-right-80px align-item-center justify-content-space-around text-center ">
       <div>
-        <img src="../../assets/Rectangle 11.png"/>
+        <img src="@/assets/ibm.png"/>
       </div>
       <div>
         <div class="mt-2 mt-sm-0 d-flex justify-content-sm-start justify-content-center"><span class="job-title">Front-end Developer</span></div>

@@ -6,12 +6,12 @@
         class=" align-item-center justify-content-space-around text-center"
       >
         <div class="text-align-left padding-right-20px">
-          <img src="../../assets/Vector.png"/>
+          <img src="@/assets/bookmark.png"/>
         </div>
         <div>
           <img
             class="image-tablet-height"
-            src="../../assets/Rectangle 11 (4).png"
+            src="@/assets/ibm.png"
           />
         </div>
         <div class="pb-15">
@@ -25,12 +25,12 @@
         class="align-item-center justify-content-space-around text-center"
       >
         <div class="text-align-left padding-right-20px">
-          <img src="../../assets/Vector.png"/>
+          <img src="@/assets/bookmark.png"/>
         </div>
         <div>
           <img
             class="image-tablet-height"
-            src="../../assets/Rectangle 11 (5).png"
+            src="@/assets/ibm.png"
           />
         </div>
         <div class="pb-15">
@@ -44,10 +44,10 @@
         class=" align-item-center justify-content-space-around text-center"
       >
         <div class="text-align-left padding-right-20px">
-          <img src="../../assets/Vector.png"/>
+          <img src="@/assets/bookmark.png"/>
         </div>
         <div>
-          <img src="../../assets/Rectangle 11 (6).png"/>
+          <img src="@/assets/dell.png"/>
         </div>
         <div class="pb-15">
           <span class="companies-name-logo"> Dell </span>
@@ -60,12 +60,12 @@
         class=" align-item-center justify-content-space-around text-center"
       >
         <div class="text-align-left padding-right-20px">
-          <img src="../../assets/Vector.png"/>
+          <img src="@/assets/bookmark.png"/>
         </div>
         <div>
           <img
             class="image-tablet-height"
-            src="../../assets/Rectangle 11 (4).png"
+            src="@/assets/ibm.png"
           />
         </div>
         <div class="pb-15">

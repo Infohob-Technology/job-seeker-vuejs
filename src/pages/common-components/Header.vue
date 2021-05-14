@@ -2,10 +2,9 @@
   <nav ref="nav" class="">
     <div class=" nav-top">
       <div class="header background-header">
-
         <div class="flex-x">
           <router-link class="logo" to="/">
-            <img src="../../assets/Frame 1376 1.png"/>
+            <img src="@/assets/logo.png"/>
           </router-link>
         </div>
 
@@ -170,7 +169,7 @@ export default {
   }
 }
 
-@import "~bootstrap/dist/css/bootstrap.css";
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 
 .nav-links li {
   list-style: none;

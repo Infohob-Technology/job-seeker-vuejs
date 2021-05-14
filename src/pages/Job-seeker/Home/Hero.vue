@@ -197,6 +197,7 @@ function hasErrors(fieldsError) {
 }
 
 export default {
+  name: 'Hero',
   data() {
     return {
       cssProps: {

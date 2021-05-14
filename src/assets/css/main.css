@@ -13,7 +13,8 @@
     width: 40px;
     height: 40px;
     margin-top: -18px;
-    border-radius: 30%;
+
+  border-radius: 4px;
 }
 .ant-slider-dot:first-child{
     display: none;

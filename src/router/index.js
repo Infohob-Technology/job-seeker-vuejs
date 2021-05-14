@@ -1,32 +1,32 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HomePageContainer from '../components/HomePageContainer';
-import RegistrationIndex from '../components/Job-seeker/registration';
-import JobsIndex from '../components/Job-seeker/Jobs';
-import LoginIndex from '../components/Login/index';
-import ForgotPasswordIndex from '../components/Job-seeker/forgot-password';
-import AdminJobSeeker from '../components/admin-job-seeker';
-import MyAccount from '../components/My-Account/account-details/index';
+import HomePageContainer from '../pages/Job-seeker/Home/HomePageContainer';
+import RegistrationIndex from '../pages/Job-seeker/registration';
+import JobsIndex from '../pages/Job-seeker/Jobs';
+import LoginIndex from '../pages/Login/index';
+import ForgotPasswordIndex from '../pages/forgot-password';
+import AdminJobSeeker from '../pages/admin-job-seeker';
+import MyAccount from '../pages/My-Account/account-details/index';
 import support_messages
-  from '../components/My-Account/support-messages/support-messages';
-import Steps from '../components/Job-seeker/profile/steps';
+  from '../pages/My-Account/support-messages/support-messages';
+import Steps from '../pages/Job-seeker/profile/steps';
 import index_myAccount
-  from '../components/Job-seeker/MyAccount/index_myAccount';
-import tabs from '../components/Job-seeker/MyAccount/tabs';
-import ProfileSummery from '../components/Job-seeker/MyAccount/ProfileSummery';
+  from '../pages/Job-seeker/MyAccount/index_myAccount';
+import tabs from '../pages/Job-seeker/MyAccount/tabs';
+import ProfileSummery from '../pages/Job-seeker/MyAccount/ProfileSummery';
 import Experience_and_Skills
-  from '../components/Job-seeker/MyAccount/Experience_and_Skills';
+  from '../pages/Job-seeker/MyAccount/Experience_and_Skills';
 import Education_in_MyAccount
-  from '../components/Job-seeker/MyAccount/Education_in_MyAccount';
-import Projects from '../components/Job-seeker/MyAccount/Projects';
-import Resume_CV from '../components/Job-seeker/MyAccount/Resume_CV';
+  from '../pages/Job-seeker/MyAccount/Education_in_MyAccount';
+import Projects from '../pages/Job-seeker/MyAccount/Projects';
+import Resume_CV from '../pages/Job-seeker/MyAccount/Resume_CV';
 import MyApplications
-  from '../components/Job-seeker/MyApplications/MyApplications';
-import modal from '../components/Job/job-detail/modal';
-import Payments_2 from '../components/Payments-2/Payments_2';
+  from '../pages/Job-seeker/MyApplications/MyApplications';
+import modal from '../pages/Job-seeker/Job/job-detail/modal';
+import Payments_2 from '../pages/Payments-2/Payments_2';
 import AdminJobSeekerDetailedPage
-  from '../components/admin-job-seeker/job-seeker-detailed-view';
-import JobDetail from '../components/Job/job-detail/JobDetail';
+  from '../pages/admin-job-seeker/job-seeker-detailed-view';
+import JobDetail from '../pages/Job-seeker/Job/job-detail/JobDetail';
 import {store} from '../store/store';
 
 Vue.use(Router);
@@ -215,11 +215,11 @@ let router = new Router({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresProfileData)) {
-    if (store.getters.isProfileCompleted) {
+    // if (store.getters.isProfileCompleted) {
       next();
-      return;
-    }
-    next('/profile-data');
+      // return;
+    // }
+    // next('/profile-data');
   } else {
     next();
   }

@@ -6,7 +6,7 @@
         <div class="col-8">
           <div class="profile-summary-text">Upload Documents</div>
           <div class="display-flex width-100 text-align-initial">
-            <a-form-item class="width-100 mr-0">
+             <a-form-item class="width-100 mr-0">
               <div class="dropbox">
                 <a-upload-dragger
                   action="/upload.do"

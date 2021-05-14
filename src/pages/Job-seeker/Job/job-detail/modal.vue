@@ -3,7 +3,7 @@
     <a-modal v-model="visible" :footer="null" @cancel="closeMe" @ok="handleOk">
       <div class="row my-2">
         <div class="col-12 text-center">
-          <img height="64" src="./tick mark.png" width="65"/>
+          <img height="64" src="tick mark.png" width="65"/>
         </div>
       </div>
       <div class="row my-3">
