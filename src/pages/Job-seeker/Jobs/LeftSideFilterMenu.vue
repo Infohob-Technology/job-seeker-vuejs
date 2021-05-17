@@ -491,13 +491,13 @@ export default {
       this.toggleLocationOpt = !this.toggleLocationOpt;
     },
     onChange(checkedValues) {
-      console.log('checked = ', checkedValues);
+      // =>checkedValues
     },
     onChangeLocation(e) {
-      console.log('radio checked', e.target.value);
+      // => e.target.value
     },
     onChangeCompanySize(checkedValues) {
-      console.log('checked = ', checkedValues);
+      // => checkedValues
     },
     handleChangeLocationSlider(value) {
       this.valueLocationSlider = value;

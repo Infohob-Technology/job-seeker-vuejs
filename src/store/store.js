@@ -34,7 +34,6 @@ export const store = new Vuex.Store({
     },
     CHANGE_TAB(state, tab) {
       state.tab = tab;
-      console.log(tab);
     },
     NEXT_STEP(state) {
       state.step += 1;

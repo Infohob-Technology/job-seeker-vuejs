@@ -141,8 +141,7 @@ export default {
       this.current--;
     },
     saveStep(data) {
-      alert('emit');
-      console.log(data);
+      // =>data
     },
   },
 };

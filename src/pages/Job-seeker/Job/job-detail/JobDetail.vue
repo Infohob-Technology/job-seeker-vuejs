@@ -369,7 +369,6 @@ export default {
       this.visible = true;
     },
     handleOk(e) {
-      console.log(e);
 
       if (this.file) {
         this.visible = false;
@@ -399,7 +398,7 @@ export default {
       event.currentTarget.classList.remove('drag-over');
     },
     onChange() {
-      console.log(this.$refs.file.files[0]);
+
       this.file = this.$refs.file.files[0];
       this.err = '';
     },

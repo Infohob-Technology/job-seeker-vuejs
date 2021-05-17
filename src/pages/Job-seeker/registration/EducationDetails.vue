@@ -274,7 +274,7 @@ export default {
       this.nextStep();
       this.form.validateFields((err, values) => {
         if (!err) {
-          console.log('Received values of form: ', values);
+          // Received values of form: => values
         }
       });
     },

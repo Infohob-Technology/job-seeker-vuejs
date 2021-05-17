@@ -83,13 +83,13 @@ export default {
       e.preventDefault();
       this.form.validateFields((err, values) => {
         if (!err) {
-          console.log('Received values of form: ', values);
+          // Received values of form: => values
           this.$emit('stepSuccess', values);
         }
       });
     },
     handleChange(value) {
-      console.log(`selected ${value}`);
+      // selected => value
     },
   },
 

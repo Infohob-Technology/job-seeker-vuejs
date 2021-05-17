@@ -61,7 +61,6 @@ export default {
       }
       this.$refs.burger.classList.toggle('toggle');
       this.nav_state = !this.nav_state;
-      console.log(this.nav_state);
     },
   },
 };

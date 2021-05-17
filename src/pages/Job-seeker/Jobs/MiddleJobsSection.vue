@@ -19,16 +19,16 @@
       </div>
     </div>
     <div class="mt-44">
-      <middle-jobs-card :image="`Rectangle 11 (9).png`" :isFeatured="true"/>
-      <middle-jobs-card :image="`Rectangle 11 (12).png`" :isFeatured="true"/>
-      <middle-jobs-card :image="`Rectangle 11 (13).png`" :isFeatured="false"/>
-      <middle-jobs-card :image="`Rectangle 11 (14).png`" :isFeatured="false"/>
-      <middle-jobs-card :image="`Rectangle 11 (14).png`" :isFeatured="false"/>
-      <middle-jobs-card :image="`Rectangle 11 (14).png`" :isFeatured="false"/>
-      <middle-jobs-card :image="`Rectangle 11 (14).png`" :isFeatured="false"/>
-      <middle-jobs-card :image="`Rectangle 11 (14).png`" :isFeatured="true"/>
-      <middle-jobs-card :image="`Rectangle 11 (14).png`" :isFeatured="true"/>
-      <middle-jobs-card :image="`Rectangle 11 (14).png`" :isFeatured="true"/>
+      <middle-jobs-card image="dell.png" :isFeatured="true"/>
+      <middle-jobs-card image="dell.png" :isFeatured="true"/>
+      <middle-jobs-card image="dell.png" :isFeatured="false"/>
+      <middle-jobs-card image="dell.png" :isFeatured="false"/>
+      <middle-jobs-card image="dell.png" :isFeatured="false"/>
+      <middle-jobs-card image="dell.png" :isFeatured="false"/>
+      <middle-jobs-card image="dell.png" :isFeatured="false"/>
+      <middle-jobs-card image="dell.png" :isFeatured="true"/>
+      <middle-jobs-card image="dell.png" :isFeatured="true"/>
+      <middle-jobs-card image="dell.png" :isFeatured="true"/>
     </div>
     <!-- <div class="mt-44">
       <div class="display-flex align-item-center">
