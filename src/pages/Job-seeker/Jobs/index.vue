@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Footer from './Footer';
+
 import Header from '../../common-components/Header.vue';
 import LeftSideMenu from './LeftSideFilterMenu';
 import RightSideFeaturedJobs from './RightSideFeaturedJobs.vue';
@@ -30,7 +30,7 @@ import MiddleJobsSection from './MiddleJobsSection.vue';
 export default {
   name: 'JobsIndex',
   components: {
-    Footer,
+
     Header,
     LeftSideMenu,
     RightSideFeaturedJobs,

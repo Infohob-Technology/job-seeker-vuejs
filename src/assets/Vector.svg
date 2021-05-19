@@ -1,0 +1,26 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.9" filter="url(#filter0_bd)">
+    <path
+      d="M19.1267 1.30134C18.2242 0.815377 17.2175 1.75259 16.6275 2.30797C15.2738 3.62702 14.1283 5.15432 12.8439 6.54279C11.4207 8.0701 10.1017 9.59741 8.64378 11.0901C7.8107 11.9231 6.9082 12.8256 6.35282 13.867C5.1032 12.652 4.02714 11.333 2.63868 10.257C1.63204 9.49333 -0.0341167 8.93794 0.00059487 10.7777C0.0700181 13.1728 2.18743 15.7415 3.74945 17.3729C4.40897 18.0671 5.27676 18.796 6.28339 18.8307C7.4983 18.9002 8.74792 17.4423 9.47686 16.6439C10.7612 15.2555 11.8026 13.6934 12.9827 12.2703C14.51 10.3958 16.0721 8.55606 17.5647 6.64692C18.5019 5.46673 21.4524 2.5509 19.1267 1.30134ZM1.52785 10.6388C1.49314 10.6388 1.45843 10.6388 1.389 10.6735C1.25016 10.6388 1.14602 10.604 1.00717 10.5346C1.11131 10.4652 1.28487 10.4999 1.52785 10.6388Z"
+      fill="url(#paint0_linear)"/>
+  </g>
+  <defs>
+    <filter id="filter0_bd" x="-27.1828" y="-26.0168" width="74.3657" height="72.0328" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImage" stdDeviation="13.5914"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="8"/>
+      <feGaussianBlur stdDeviation="8"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+      <feBlend mode="normal" in2="effect1_backgroundBlur" result="effect2_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear" x1="-9.99995" y1="9.99958" x2="7.53216" y2="29.8467"
+                    gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2797FF"/>
+      <stop offset="1" stop-color="#309CFF"/>
+    </linearGradient>
+  </defs>
+</svg>

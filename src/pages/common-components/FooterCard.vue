@@ -66,7 +66,7 @@
                   <span class="finds-job-footer-text">Find Jobs in</span>
                 </div>
               </div>
-              </div>
+            </div>
             <div class="row justify-content-end">
 
               <div class="col-md-4">
@@ -88,14 +88,14 @@
 
                 </div>
                 <div class="footer-text mt-24">
-                  <router-link to="/">                  <span class="post-finds-jobs-in"> Accra </span></router-link>
+                  <router-link to="/"><span class="post-finds-jobs-in"> Accra </span></router-link>
 
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="footer-text mt-24">
 
-                   <router-link to="/"><span class="post-finds-jobs-in"> Kampala </span></router-link>
+                  <router-link to="/"><span class="post-finds-jobs-in"> Kampala </span></router-link>
 
                 </div>
                 <div class="footer-text mt-24">
@@ -124,8 +124,8 @@
 </template>
 
 <script>
-import FooterMain from '../../common-components/FooterMain.vue';
-import JobCards from '../../common-components/JobCards.vue';
+import FooterMain from './FooterMain.vue';
+import JobCards from './JobCards.vue';
 
 export default {
   components: {JobCards, FooterMain},

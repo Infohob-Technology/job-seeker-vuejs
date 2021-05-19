@@ -121,6 +121,7 @@ export default {};
     margin-right: 3px;
   }
 }
+
 @media only screen and (max-width: 1024px) {
   .footer-main {
     padding: 10px 16px

@@ -115,11 +115,12 @@ hr {
   background: #f5faff;
 }
 
-@media (max-width: 768px){
-  .mt-110{
+@media (max-width: 768px) {
+  .mt-110 {
     margin-top: 40px;
   }
-  .label-top-hiring-companie{
+
+  .label-top-hiring-companie {
     font-size: 36px;
     line-height: 1.2;
   }

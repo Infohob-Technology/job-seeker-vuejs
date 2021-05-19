@@ -1,19 +1,17 @@
 <template>
-  <div class="main-div">
-    <!--    <div class="bg-image">-->
-    <div class="container-fluid">
-      <Hero/>
-      <recent-jobs/>
-      <top-hiring-companies/>
-      <talent-opportunity/>
-    </div>
-    <footer-card/>
+  <!--  <div class="main-div">-->
+  <div class="container-fluid">
+    <Hero/>
+    <recent-jobs/>
+    <top-hiring-companies/>
+    <talent-opportunity/>
   </div>
+
   <!--  </div>-->
 </template>
 
 <script>
-import FooterCard from './FooterCard.vue';
+
 import Hero from './Hero.vue';
 import RecentJobs from './RecentJobs.vue';
 import TalentOpportunity from './TalentOpportunity.vue';
@@ -25,7 +23,6 @@ export default {
     RecentJobs,
     TopHiringCompanies,
     TalentOpportunity,
-    FooterCard,
   },
   data() {
     return {
@@ -43,7 +40,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .main-div {
-  height: 640px;
+  /*height: 640px;*/
 }
 
 </style>

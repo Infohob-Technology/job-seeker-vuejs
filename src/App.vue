@@ -6,14 +6,11 @@
 
 <script>
 
-import Header from './pages/common-components/Header.vue';
-import Footer from './pages/Job-seeker/Jobs/Footer.vue';
 import {store} from './store/store';
 
 export default {
   name: 'App',
   store,
-  components: {Header, Footer},
 };
 
 </script>

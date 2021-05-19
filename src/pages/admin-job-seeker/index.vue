@@ -176,52 +176,52 @@
         </a-table>
       </a-tab-pane>
       <a-tab-pane key="2" tab="Settings">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="settings">
-            <h4>Do we need administrator approval for Jobseeker account ?</h4>
-            <div class="row mb-3">
-              <div class="col-6">
-                <label class="settings-label">
-                  <input type="radio" name="setting" value="yes">
-                  Yes
-                </label>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="settings">
+              <h4>Do we need administrator approval for Jobseeker account ?</h4>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label class="settings-label">
+                    <input name="setting" type="radio" value="yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="col-6">
+                  <label class="settings-label">
+                    <input name="setting" type="radio" value="no">
+                    No
+                  </label>
+                </div>
               </div>
-              <div class="col-6">
-                <label class="settings-label">
-                  <input type="radio" name="setting" value="no">
-                  No
-                </label>
+
+
+              <div class="row p-0">
+                <div class="col-6">
+                  <button class="btn btn-light btn-block">
+                    Cancel
+                  </button>
+                </div>
+                <div class="col-6">
+
+                  <button class="btn btn-primary btn-block">
+                    Apply
+                  </button>
+
+                </div>
               </div>
+
             </div>
-
-
-
-           <div class="row p-0">
-             <div class="col-6">
-               <button class="btn btn-light btn-block" >
-                 Cancel
-               </button>
-             </div>
-             <div class="col-6">
-
-               <button class="btn btn-primary btn-block">
-                 Apply
-               </button>
-
-             </div>
-           </div>
-
           </div>
         </div>
-      </div>
       </a-tab-pane>
     </a-tabs>
-    <AddJobSeeker :visible="showAddSekeer" @closeMe="showAddSekeer=false" />
+    <AddJobSeeker :visible="showAddSekeer" @closeMe="showAddSekeer=false"/>
   </div>
 </template>
 <script>
-import AddJobSeeker from './AddJobSeeker'
+import AddJobSeeker from './AddJobSeeker';
+
 const columns = [
   {
     dataIndex: 'name',
@@ -481,11 +481,11 @@ export default {
         showTotal: (total) => `Total ${total} items`, // show total
         showSizeChange: (current, pageSize) => (this.pageSize = pageSize), // update display when changing the number of pages per page
       },
-      showAddSekeer: false
+      showAddSekeer: false,
     };
   },
   components: {
-    AddJobSeeker
+    AddJobSeeker,
   },
   methods: {
     displayDetailed() {
@@ -568,14 +568,15 @@ export default {
   vertical-align: middle;
 }
 
-.settings h4{
+.settings h4 {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
 }
-.settings-label{
+
+.settings-label {
   height: 52px;
   width: 100%;
   background: rgba(90, 170, 223, 0.04);
@@ -586,11 +587,13 @@ export default {
   padding-left: 30px;
   column-gap: 10px;
 }
-.btn-block{
+
+.btn-block {
   height: 48px;
 }
+
 .no-of-total-category {
-  font-family: 'Open Sans',sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -661,10 +664,11 @@ th {
 .ant-table-row-cell-last {
   min-width: 150px !important;
 }
-@media (max-width: 768px){
-  .container-fluid{
+
+@media (max-width: 768px) {
+  .container-fluid {
     padding-left: 20px;
-    padding-right:   20px
+    padding-right: 20px
   }
 }
 </style>

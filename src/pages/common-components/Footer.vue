@@ -12,13 +12,13 @@
         <a href="#my-account">Contact us</a>
       </div>
     </div>
-    <div class="background-footer container-fluid padding-20px">
+    <div class="background-footer container-fluid ">
       <div
         class="footer-main"
       >
         <div>
           <div>
-            <img src="../../../assets/logo-red.png"/>
+            <img src="../../assets/logo-red.png"/>
           </div>
           <div class="">
             <span class="logo-font-footer"> Infohob</span>
@@ -29,16 +29,16 @@
         </div>
         <div class="display-flex justify-content-space-between mr-50px ">
           <div class="border-box-images">
-            <img src="../../../assets/fb.png"/>
+            <img src="../../assets/fb.png"/>
           </div>
           <div class="border-box-images">
-            <img src="../../../assets/insta.png"/>
+            <img src="../../assets/insta.png"/>
           </div>
           <div class="border-box-images background-color-instagram">
-            <img src="../../../assets/pinterst.png"/>
+            <img src="../../assets/pinterst.png"/>
           </div>
           <div class="border-box-images">
-            <img src="../../../assets/twitter.png"/>
+            <img src="../../assets/twitter.png"/>
           </div>
         </div>
       </div>
@@ -133,7 +133,7 @@ export default {
   align-items: center;
   overflow: hidden;
   background-color: "#FAFAFA";
-  padding: 10px 30px;
+  padding: 10px 90px;
   height: 80px;
   background: #232c3a;
 }
@@ -176,12 +176,10 @@ export default {
   font-size: 14px;
 }
 
-.padding-20px {
-  padding: 5px 0px 5px 30px;
-}
-
 .background-footer {
   background: #354255;
+  padding: 5px 115px;
+
 }
 
 .ml-100px {
@@ -221,6 +219,16 @@ export default {
   align-items: center;
 }
 
+@media only screen and (max-width: 991px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .background-footer {
+    padding: 5px 20px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .header {
     display: none;
@@ -240,7 +248,7 @@ export default {
     margin-right: 0px;
   }
 
-  .padding-20px {
+  .background-footer {
     padding: 5px 0px 5px 0px !important;
   }
 

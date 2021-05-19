@@ -8,11 +8,11 @@
           <option value="opel">Opel</option>
           <option value="audi">Audi</option>
         </select>
-        <img alt="" class="arrow" src="./arrow.png">
+        <img alt="" class="arrow" src="@/assets/arrow.png">
       </div>
       <div class="input-outer child">
         <input class="input" placeholder="Amount Paid" type="text">
-        <img alt="n-icon" class="search-icon" src="./n-icon.png">
+        <img alt="n-icon" class="search-icon" src="@/assets/n-icon.png">
       </div>
       <div class="input-outer child">
         <input class="input" placeholder="Transaction Number" type="text">

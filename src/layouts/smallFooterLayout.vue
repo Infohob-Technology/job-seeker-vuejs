@@ -2,17 +2,18 @@
   <div>
     <Header/>
     <router-view/>
-    <FooterCard/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import FooterCard from '../pages/common-components/FooterCard';
+
 import Header from '../pages/common-components/Header.vue';
+import Footer from '@/pages/common-components/Footer.vue';
 
 export default {
-  name: 'App',
-  components: {Header, FooterCard},
+  name: 'SmallFooterLayout',
+  components: {Header, Footer},
 };
 
 </script>

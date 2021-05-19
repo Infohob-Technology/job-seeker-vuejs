@@ -19,11 +19,11 @@
         </span>
       </div>
     </div>
-    <transition name="expand" mode="out-in">
+    <transition mode="out-in" name="expand">
       <div
         v-if="toggleCat"
-        class="category expand-transition"
         :style="{'height': ((compIndustries.length*40)+80)+'px'}"
+        class="category expand-transition"
 
       >
         <a-checkbox-group @change="onChange">
@@ -42,9 +42,11 @@
             >
           </a-row>
         </a-checkbox-group>
-        <div class="text-align-initial ptb-20" v-if="industries.length>showItems">
-          <span class="more-plus" v-if="!showAllIndustries" @click="showAllIndustries=true">+{{ industries.length-showItems }} More</span>
-          <span class="more-plus" v-else @click="showAllIndustries=false">-Show less</span>
+        <div v-if="industries.length>showItems" class="text-align-initial ptb-20">
+          <span v-if="!showAllIndustries" class="more-plus" @click="showAllIndustries=true">+{{
+              industries.length - showItems
+            }} More</span>
+          <span v-else class="more-plus" @click="showAllIndustries=false">-Show less</span>
         </div>
         <div class="ml-10px">
           <hr/>
@@ -63,36 +65,38 @@
         </span>
       </div>
     </div>
-    <transition name="expand" mode="out-in">
-    <div
-      v-if="toggleSalaryOpt"
-      class="category expand-transition"
-      :style="{'height': ((compSalaries.length*40)+80)+'px'}"
-    >
-      <a-checkbox-group @change="onChange">
-        <a-row>
-          <a-col :span="24" class="text-align-initial"
-                 v-for="item in compSalaries"
-                 :key="item.value"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              :value="item.name"
-            >{{ item.name }}
-            </a-checkbox
+    <transition mode="out-in" name="expand">
+      <div
+        v-if="toggleSalaryOpt"
+        :style="{'height': ((compSalaries.length*40)+80)+'px'}"
+        class="category expand-transition"
+      >
+        <a-checkbox-group @change="onChange">
+          <a-row>
+            <a-col v-for="item in compSalaries" :key="item.value"
+                   :span="24"
+                   class="text-align-initial"
             >
-          </a-col
-          >
-        </a-row>
-      </a-checkbox-group>
-      <div class="text-align-initial ptb-20" v-if="salaries.length>showItems">
-        <span class="more-plus" v-if="!showAllSalaries" @click="showAllSalaries=true">+{{ salaries.length-showItems }} More</span>
-        <span class="more-plus" v-else @click="showAllSalaries=false">-Show less</span>
+              <a-checkbox
+                :value="item.name"
+                class="text-align-initial checkbox-color mt-10"
+              >{{ item.name }}
+              </a-checkbox
+              >
+            </a-col
+            >
+          </a-row>
+        </a-checkbox-group>
+        <div v-if="salaries.length>showItems" class="text-align-initial ptb-20">
+          <span v-if="!showAllSalaries" class="more-plus" @click="showAllSalaries=true">+{{
+              salaries.length - showItems
+            }} More</span>
+          <span v-else class="more-plus" @click="showAllSalaries=false">-Show less</span>
+        </div>
+        <div class="ml-10px">
+          <hr/>
+        </div>
       </div>
-      <div class="ml-10px">
-        <hr/>
-      </div>
-    </div>
     </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
@@ -105,25 +109,25 @@
         </span>
       </div>
     </div>
-    <transition name="expand" mode="out-in">
-    <div
-      v-if="toggleExperienceOpt"
-      class="experience-block expand-transition"
-      transition="expand"
-    >
-      <div class="padding-slider">
-        <a-slider
-          :marks="marks"
-          :max="30"
-          :min="0"
-          :value="value"
-          @change="handleChange"
-        />
+    <transition mode="out-in" name="expand">
+      <div
+        v-if="toggleExperienceOpt"
+        class="experience-block expand-transition"
+        transition="expand"
+      >
+        <div class="padding-slider">
+          <a-slider
+            :marks="marks"
+            :max="30"
+            :min="0"
+            :value="value"
+            @change="handleChange"
+          />
+        </div>
+        <div class="ml-10px">
+          <hr/>
+        </div>
       </div>
-      <div class="ml-10px">
-        <hr/>
-      </div>
-    </div>
     </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
@@ -136,31 +140,31 @@
         </span>
       </div>
     </div>
-    <transition name="expand" mode="out-in">
-    <div
-      v-if="toggleLocationOpt"
-      class="location-box expand-transition"
-      transition="expand"
-    >
-      <div class="location-radio">
-        <a-radio-group v-model="valueLocation" @change="onChangeLocation">
-          <a-radio :value="1" class="radio-label">A</a-radio>
-          <a-radio :value="2" class="radio-label">B</a-radio>
-        </a-radio-group>
+    <transition mode="out-in" name="expand">
+      <div
+        v-if="toggleLocationOpt"
+        class="location-box expand-transition"
+        transition="expand"
+      >
+        <div class="location-radio">
+          <a-radio-group v-model="valueLocation" @change="onChangeLocation">
+            <a-radio :value="1" class="radio-label">A</a-radio>
+            <a-radio :value="2" class="radio-label">B</a-radio>
+          </a-radio-group>
+        </div>
+        <div class="padding-slider">
+          <a-slider
+            :marks="marksLocationSlider"
+            :max="1000"
+            :min="1"
+            :value="valueLocationSlider"
+            @change="handleChangeLocationSlider"
+          />
+        </div>
+        <div class="ml-10px">
+          <hr/>
+        </div>
       </div>
-      <div class="padding-slider">
-        <a-slider
-          :marks="marksLocationSlider"
-          :max="1000"
-          :min="1"
-          :value="valueLocationSlider"
-          @change="handleChangeLocationSlider"
-        />
-      </div>
-      <div class="ml-10px">
-        <hr/>
-      </div>
-    </div>
     </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
@@ -173,25 +177,25 @@
         </span>
       </div>
     </div>
-    <transition name="expand" mode="out-in">
-    <div
-      v-if="toggleTimePostedOpt"
-      class="time-posted-block expand-transition"
-      transition="expand"
-    >
-      <div class="padding-slider-time-posted">
-        <a-slider
-          :marks="marksTimePosted"
-          :max="60"
-          :min="0"
-          :value="valueTimePosted"
-          @change="handleChangeTimePosted"
-        />
+    <transition mode="out-in" name="expand">
+      <div
+        v-if="toggleTimePostedOpt"
+        class="time-posted-block expand-transition"
+        transition="expand"
+      >
+        <div class="padding-slider-time-posted">
+          <a-slider
+            :marks="marksTimePosted"
+            :max="60"
+            :min="0"
+            :value="valueTimePosted"
+            @change="handleChangeTimePosted"
+          />
+        </div>
+        <div class="ml-10px">
+          <hr/>
+        </div>
       </div>
-      <div class="ml-10px">
-        <hr/>
-      </div>
-    </div>
     </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
@@ -204,37 +208,37 @@
         </span>
       </div>
     </div>
-    <transition name="expand" mode="out-in">
-    <div
-      v-if="toggleCompanySizeOpt"
-      class="category expand-transition"
-      :style="{'height': ((compSize.length*40)+80)+'px'}"
-    >
-      <a-checkbox-group @change="onChangeCompanySize">
-        <a-row>
-          <a-col :span="24" class="text-align-initial"
-                 v-for="item in compSize"
-                 :key="item.value"
-          >
-            <a-checkbox
-              class="text-align-initial checkbox-color mt-10"
-              :value="item.value"
-            >{{ item.name }}
-            </a-checkbox
+    <transition mode="out-in" name="expand">
+      <div
+        v-if="toggleCompanySizeOpt"
+        :style="{'height': ((compSize.length*40)+80)+'px'}"
+        class="category expand-transition"
+      >
+        <a-checkbox-group @change="onChangeCompanySize">
+          <a-row>
+            <a-col v-for="item in compSize" :key="item.value"
+                   :span="24"
+                   class="text-align-initial"
             >
-          </a-col
-          >
+              <a-checkbox
+                :value="item.value"
+                class="text-align-initial checkbox-color mt-10"
+              >{{ item.name }}
+              </a-checkbox
+              >
+            </a-col
+            >
 
-        </a-row>
-      </a-checkbox-group>
-      <div class="text-align-initial ptb-20" v-if="sizeCompany.length>showItems">
-        <span class="more-plus" v-if="!showAllSize" @click="showAllSize=true">+{{ sizeCompany.length-showItems }} More</span>
-        <span class="more-plus" v-else @click="showAllSize=false">-Show less</span>
+          </a-row>
+        </a-checkbox-group>
+        <div v-if="sizeCompany.length>showItems" class="text-align-initial ptb-20">
+          <span v-if="!showAllSize" class="more-plus" @click="showAllSize=true">+{{ sizeCompany.length - showItems }} More</span>
+          <span v-else class="more-plus" @click="showAllSize=false">-Show less</span>
+        </div>
+        <div class="ml-10px">
+          <hr/>
+        </div>
       </div>
-      <div class="ml-10px">
-        <hr/>
-      </div>
-    </div>
     </transition>
     <div
       class="pt-30 cursor-pointer display-flex justify-content-space-between align-item-center"
@@ -247,44 +251,44 @@
         </span>
       </div>
     </div>
-    <transition name="expand" mode="out-in">
-    <div
-      v-if="toggleJobTypeOpt"
-      class="company-size-block expand-transition"
-      transition="expand"
-    >
-      <div class="row m-0">
-        <div class="col-6 prb-10 pl-0">
-          <div class="boxes-job-type">
-            <span class="box-job-type-fonts">Full Time</span>
+    <transition mode="out-in" name="expand">
+      <div
+        v-if="toggleJobTypeOpt"
+        class="company-size-block expand-transition"
+        transition="expand"
+      >
+        <div class="row m-0">
+          <div class="col-6 prb-10 pl-0">
+            <div class="boxes-job-type">
+              <span class="box-job-type-fonts">Full Time</span>
+            </div>
           </div>
-        </div>
-        <div class="col-6 p-0">
-          <div class="boxes-job-type not-selected">
+          <div class="col-6 p-0">
+            <div class="boxes-job-type not-selected">
             <span class="box-job-type-fonts not-selected-job-type-fonts"
             >Part Time</span
             >
+            </div>
           </div>
-        </div>
-        <div class="col-6 p-0">
-          <div class="boxes-job-type not-selected">
+          <div class="col-6 p-0">
+            <div class="boxes-job-type not-selected">
             <span class="box-job-type-fonts not-selected-job-type-fonts"
             >Contract</span
             >
+            </div>
           </div>
         </div>
+        <div class="ml-10px">
+          <hr/>
+        </div>
+        <div class="text-align-initial">
+          <a-checkbox
+            class="text-align-initial checkbox-color-featured-jobs mt-10"
+          >Only Featured Jobs
+          </a-checkbox
+          >
+        </div>
       </div>
-      <div class="ml-10px">
-        <hr/>
-      </div>
-      <div class="text-align-initial">
-        <a-checkbox
-          class="text-align-initial checkbox-color-featured-jobs mt-10"
-        >Only Featured Jobs
-        </a-checkbox
-        >
-      </div>
-    </div>
     </transition>
   </div>
 </template>
@@ -340,31 +344,31 @@ export default {
       salaries: [
         {
           value: '0-2',
-          name: '0-2 Lakh ₦ (200)'
+          name: '0-2 Lakh ₦ (200)',
         },
         {
           value: '2-5',
-          name: '2-5 Lakh ₦ (200)'
+          name: '2-5 Lakh ₦ (200)',
         },
         {
           value: '5-7',
-          name: '5-7 Lakh ₦ (200)'
+          name: '5-7 Lakh ₦ (200)',
         },
         {
           value: '7-9',
-          name: '7-9 Lakh ₦ (200)'
+          name: '7-9 Lakh ₦ (200)',
         },
         {
           value: '9-12',
-          name: '9-12 Lakh ₦ (200)'
+          name: '9-12 Lakh ₦ (200)',
         },
         {
           value: '12-14',
-          name: '12-14 Lakh ₦ (200)'
+          name: '12-14 Lakh ₦ (200)',
         },
         {
           value: '14-16',
-          name: '14-16 Lakh ₦ (200)'
+          name: '14-16 Lakh ₦ (200)',
         },
 
       ],
@@ -625,7 +629,7 @@ export default {
 }
 
 .more-plus {
-  font-family: 'Open Sans',sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -676,7 +680,7 @@ hr {
 }
 
 .industry-title-text {
-  font-family: 'Open Sans',sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -704,7 +708,7 @@ hr {
 }
 
 .no-of-filters-apply-text {
-  font-family: 'Open Sans',sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -751,7 +755,6 @@ hr {
 }
 
 
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -790,11 +793,13 @@ hr {
     display: block
   }
 }
+
 .expand-enter-active,
 .expand-leave-active {
   transition: all 0.3s ease-in-out;
   max-height: 230px;
 }
+
 .expand-enter,
 .expand-leave-to {
   opacity: 0;

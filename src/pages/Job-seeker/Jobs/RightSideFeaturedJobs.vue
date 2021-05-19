@@ -4,12 +4,12 @@
       <span class="fetured-jobs-title">Featured Jobs</span>
     </div>
     <div class="mt-50">
-      <featured-jobs-cards image="ibm.png" :isNew="true"/>
-      <featured-jobs-cards image="ibm.png" :isNew="false"/>
-      <featured-jobs-cards image="ibm.png" :isNew="false"/>
-      <featured-jobs-cards image="ibm.png" :isNew="false"/>
-      <featured-jobs-cards image="ibm.png" :isNew="false"/>
-      <featured-jobs-cards image="ibm.png" :isNew="false"/>
+      <featured-jobs-cards :isNew="true" image="ibm.png"/>
+      <featured-jobs-cards :isNew="false" image="ibm.png"/>
+      <featured-jobs-cards :isNew="false" image="ibm.png"/>
+      <featured-jobs-cards :isNew="false" image="ibm.png"/>
+      <featured-jobs-cards :isNew="false" image="ibm.png"/>
+      <featured-jobs-cards :isNew="false" image="ibm.png"/>
     </div>
   </div>
 </template>

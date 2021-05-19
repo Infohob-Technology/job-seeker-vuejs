@@ -734,7 +734,7 @@ input[type="range"]::-ms-fill-upper {
 
 .hero-section {
 
-  background-image: url(/static/img/Header2x.f0f86d2.jpg);
+  background-image: url('../../../assets/Header2x.jpg');
   background-size: cover;
   background-repeat-y: no-repeat;
   padding: 60px 80px;

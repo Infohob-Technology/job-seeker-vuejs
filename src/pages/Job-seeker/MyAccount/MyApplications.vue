@@ -40,7 +40,7 @@
       <div class="col-2 border border-light rounded border_a">
         <div class="row">
           <div class="col-md-2 mt-2">
-            <img height="24" src="info.png" width="24">
+            <img height="24" src="../../../assets/info.png" width="24">
           </div>
           <div class="col-md-10 font_a">
             <div>
@@ -73,7 +73,7 @@
           </div>
           <div class="row py-3">
             <div class="col-md-7">
-              <img height="20" src="map-pin.png" width="22"/>
+              <img height="20" src="../../../assets/map-pin.png" width="22"/>
               <span class="text-black-50 font_a">Ibadan & Oyo State</span>
             </div>
             <div class="col-md-5 border border-light rounded">
@@ -95,7 +95,7 @@
           </div>
           <div class="row py-3">
             <div class="col-md-7">
-              <img height="20" src="map-pin.png" width="22"/>
+              <img height="20" src="../../../assets/map-pin.png" width="22"/>
               <span class="text-black-50 font_a">Ibadan & Oyo State</span>
             </div>
             <div class="col-md-5 border border-light rounded">
@@ -117,7 +117,7 @@
           </div>
           <div class="row py-3">
             <div class="col-md-7">
-              <img height="20" src="map-pin.png" width="22"/>
+              <img height="20" src="../../../assets/map-pin.png" width="22"/>
               <span class="text-black-50 font_a">Ibadan & Oyo State</span>
             </div>
             <div class="col-md-5 border border-light rounded">
@@ -139,7 +139,7 @@
           </div>
           <div class="row py-3">
             <div class="col-md-7">
-              <img height="20" src="map-pin.png" width="22"/>
+              <img height="20" src="../../../assets/map-pin.png" width="22"/>
               <span class="text-black-50 font_a">Ibadan & Oyo State</span>
             </div>
             <div class="col-md-5 border border-light rounded">
@@ -161,7 +161,7 @@
           </div>
           <div class="row pt-3">
             <div class="col-md-7">
-              <img height="20" src="map-pin.png" width="22"/>
+              <img height="20" src="../../../assets/map-pin.png" width="22"/>
               <span class="text-black-50 font_a">Ibadan & Oyo State</span>
             </div>
             <div class="col-md-5 border border-light rounded">
@@ -190,7 +190,7 @@
         </div>
         <div class="row py-4">
           <div class="col-md-9">
-            <img height="20" src="map-pin.png" width="22"/>
+            <img height="20" src="../../../assets/map-pin.png" width="22"/>
             <span class="text-black-50 font_a">Ibadan & Oyo State</span>
           </div>
           <div class="col-md-3 border border-light rounded">

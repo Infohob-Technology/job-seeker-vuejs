@@ -57,12 +57,12 @@
         </a-button>
       </div> -->
     </div>
-    <Footer/>
+
   </div>
 </template>
 
 <script>
-import Footer from './Footer';
+
 import ProfileSummary from './ProfileSummary';
 import Header from '../../common-components/Header.vue';
 import EducationDetails from './EducationDetails.vue';
@@ -75,7 +75,7 @@ import PersonalInfo from './PersonalInfo.vue';
 export default {
   name: 'RegistrationIndex',
   components: {
-    Footer,
+
     Header,
     ProfileSummary,
     EducationDetails,

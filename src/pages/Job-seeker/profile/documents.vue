@@ -8,7 +8,7 @@
     <div class="jumbotron">
       <div class="row mb-2">
         <div class="col-12 text-center">
-          <img class="h-40 w-auto" src="./upload.png"/>
+          <img class="h-40 w-auto" src="@/assets/upload.png"/>
         </div>
       </div>
       <div class="row py-2">

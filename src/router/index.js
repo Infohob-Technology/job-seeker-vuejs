@@ -1,46 +1,18 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HomePageContainer from '../pages/Job-seeker/Home/HomePageContainer';
-import RegistrationIndex from '../pages/Job-seeker/registration';
-import JobsIndex from '../pages/Job-seeker/Jobs';
-import LoginIndex from '../pages/Login/index';
-import ForgotPasswordIndex from '../pages/forgot-password';
-import AdminJobSeeker from '../pages/admin-job-seeker';
-import MyAccount from '../pages/My-Account/account-details/index';
-import support_messages
-  from '../pages/My-Account/support-messages/support-messages';
-import Steps from '../pages/Job-seeker/profile/steps';
-import index_myAccount
-  from '../pages/Job-seeker/MyAccount/index_myAccount';
-import tabs from '../pages/Job-seeker/MyAccount/tabs';
-import ProfileSummery from '../pages/Job-seeker/MyAccount/ProfileSummery';
-import Experience_and_Skills
-  from '../pages/Job-seeker/MyAccount/Experience_and_Skills';
-import Education_in_MyAccount
-  from '../pages/Job-seeker/MyAccount/Education_in_MyAccount';
-import Projects from '../pages/Job-seeker/MyAccount/Projects';
-import Resume_CV from '../pages/Job-seeker/MyAccount/Resume_CV';
-import MyApplications
-  from '../pages/Job-seeker/MyApplications/MyApplications';
-import modal from '../pages/Job-seeker/Job/job-detail/modal';
-import Payments_2 from '../pages/Payments-2/Payments_2';
-import AdminJobSeekerDetailedPage
-  from '../pages/admin-job-seeker/job-seeker-detailed-view';
-import JobDetail from '../pages/Job-seeker/Job/job-detail/JobDetail';
-import {store} from '../store/store';
 
 Vue.use(Router);
 let router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '',
-      component: () => import('../layouts/noFooterLayout.vue'),
+      path: '/',
+      component: () => import('@/layouts/primaryFooterLayout.vue'),
       children: [
         {
-          path: '/',
-          name: 'HomePageContainer',
-          component: HomePageContainer,
+          path: '',
+          name: 'Home',
+          component: () => import('@/pages/Job-seeker/Home'),
           meta: {
             requiresAuth: true,
           },
@@ -49,12 +21,29 @@ let router = new Router({
     },
     {
       path: '',
-      component: () => import('../layouts/primaryFooterLayout.vue'),
+      component: () => import('../layouts/authLayout.vue'),
+      children: [
+        {
+          path: '/job-seeker/login',
+          name: 'LoginIndex',
+          component: () => import('../pages/Login/index'),
+        },
+        {
+          path: '/job-seeker/forgot-password',
+          name: 'ForgotPasswordIndex',
+          component: () => import('../pages/forgot-password'),
+        },
+
+      ],
+    },
+    {
+      path: '',
+      component: () => import('../layouts/smallFooterLayout.vue'),
       children: [
         {
           path: '/registration',
           name: 'RegistrationIndex',
-          component: RegistrationIndex,
+          component: () => import('../pages/Job-seeker/registration'),
           meta: {
             requiresAuth: true,
           },
@@ -62,25 +51,15 @@ let router = new Router({
         {
           path: '/jobs',
           name: 'JobsIndex',
-          component: JobsIndex,
+          component: () => import('../pages/Job-seeker/Jobs'),
           meta: {
             requiresAuth: true,
           },
         },
         {
-          path: '/job-seeker/login',
-          name: 'LoginIndex',
-          component: LoginIndex,
-        },
-        {
-          path: '/job-seeker/forgot-password',
-          name: 'ForgotPasswordIndex',
-          component: ForgotPasswordIndex,
-        },
-        {
           path: '/admin/job-seeker',
           name: 'AdminJobSeeker',
-          component: AdminJobSeeker,
+          component: () => import('../pages/admin-job-seeker'),
           meta: {
             requiresAuth: true,
           },
@@ -88,7 +67,7 @@ let router = new Router({
         {
           path: '/job-detail',
           name: 'JobDetail',
-          component: JobDetail,
+          component: () => import('../pages/Job-seeker/Job/job-detail/JobDetail'),
           meta: {
             requiresAuth: true,
           },
@@ -96,16 +75,15 @@ let router = new Router({
         {
           path: '/admin/job-seeker/:id',
           name: 'AdminJobSeekerDetailedPage',
-          component: AdminJobSeekerDetailedPage,
+          component: () => import('../pages/admin-job-seeker/job-seeker-detailed-view'),
           meta: {
             requiresAuth: true,
           },
         },
-
         {
           path: '/myAccount',
           name: 'myAccount',
-          component: MyAccount,
+          component: () => import('../pages/My-Account/account-details/index'),
           meta: {
             requiresAuth: true,
           },
@@ -113,7 +91,7 @@ let router = new Router({
         {
           path: '/support_messages',
           name: 'support_messages',
-          component: support_messages,
+          component: () => import('../pages/My-Account/support-messages/support-messages'),
           meta: {
             requiresAuth: true,
           },
@@ -121,7 +99,7 @@ let router = new Router({
         {
           path: '/profile-data',
           name: 'Steps',
-          component: Steps,
+          component: () => import('../pages/Job-seeker/profile/steps'),
           meta: {
             requiresAuth: true,
           },
@@ -129,7 +107,7 @@ let router = new Router({
         {
           path: '/index_myAccount',
           name: 'index_myAccount',
-          component: index_myAccount,
+          component: () => import('../pages/Job-seeker/MyAccount/index_myAccount'),
           meta: {
             requiresAuth: true,
           },
@@ -137,7 +115,7 @@ let router = new Router({
         {
           path: '/profile',
           name: 'tabs',
-          component: tabs,
+          component: () => import('../pages/Job-seeker/MyAccount/tabs'),
           meta: {
             requiresAuth: true,
             requiresProfileData: true,
@@ -146,7 +124,7 @@ let router = new Router({
         {
           path: '/ProfileSummery',
           name: 'ProfileSummery',
-          component: ProfileSummery,
+          component: () => import('../pages/Job-seeker/MyAccount/ProfileSummery'),
           meta: {
             requiresAuth: true,
           },
@@ -154,7 +132,7 @@ let router = new Router({
         {
           path: '/Education_in_MyAccount',
           name: 'Education_in_MyAccount',
-          component: Education_in_MyAccount,
+          component: () => import('../pages/Job-seeker/MyAccount/Education_in_MyAccount'),
           meta: {
             requiresAuth: true,
           },
@@ -162,7 +140,7 @@ let router = new Router({
         {
           path: '/Experience_and_Skills',
           name: 'Experience_and_Skills',
-          component: Experience_and_Skills,
+          component: () => import('../pages/Job-seeker/MyAccount/Experience_and_Skills'),
           meta: {
             requiresAuth: true,
           },
@@ -170,7 +148,7 @@ let router = new Router({
         {
           path: '/Projects',
           name: 'Projects',
-          component: Projects,
+          component: () => import('../pages/Job-seeker/MyAccount/Projects'),
           meta: {
             requiresAuth: true,
           },
@@ -178,7 +156,7 @@ let router = new Router({
         {
           path: '/Resume_CV',
           name: 'Resume_CV',
-          component: Resume_CV,
+          component: () => import('../pages/Job-seeker/MyAccount/Resume_CV'),
           meta: {
             requiresAuth: true,
           },
@@ -186,38 +164,37 @@ let router = new Router({
         {
           path: '/my-applications',
           name: 'MyApplications',
-          component: MyApplications,
+          component: () => import('../pages/Job-seeker/MyApplications/MyApplications'),
           meta: {
             requiresAuth: true,
           },
         },
-        {
-          path: '/modal',
-          name: 'modal',
-          component: modal,
-          meta: {
-            requiresAuth: true,
-          },
-        },
+        // {
+        //   path: '/modal',
+        //   name: 'modal',
+        //   component: modal,
+        //   meta: {
+        //     requiresAuth: true,
+        //   },
+        // },
         {
           path: '/Payemnts_2',
           name: 'Payments_2',
-          component: Payments_2,
+          component: () => import('../pages/Payments-2/Payments_2'),
           meta: {
             requiresAuth: true,
           },
         },
       ],
     },
-
   ],
 });
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresProfileData)) {
     // if (store.getters.isProfileCompleted) {
-      next();
-      // return;
+    next();
+    // return;
     // }
     // next('/profile-data');
   } else {
