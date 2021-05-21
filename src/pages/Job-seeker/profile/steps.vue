@@ -114,7 +114,6 @@ body {
 .container {
 
   color: #0385F3;
-  /*background: #2979FF;*/
   font-family: 'Roboto', sans-serif;
 }
 
@@ -177,12 +176,6 @@ body {
   background-color: #0084F4;
   color: #ffffff;
   content: "✔";
-}
-
-.progressbar li.active + li:after {
-  /*   background:  #00E676; */
-  /*   border-bottom: 1px dashed */
-  /*border-color: #00E676;*/
 }
 
 @media only screen and (max-width: 767px) {

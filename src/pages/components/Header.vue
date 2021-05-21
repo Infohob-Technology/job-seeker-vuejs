@@ -303,14 +303,4 @@ export default {
     opacity: 1;
   }
 }
-
-/*.toggle .line1{*/
-/*    transform:rotate(-45deg) translate(-5px,10px);*/
-/*}*/
-/*.toggle .line2{*/
-/*    opacity:0;*/
-/*}*/
-/*.toggle .line3{*/
-/*    transform:rotate(45deg) translate(-5px,-10px);*/
-/*}*/
 </style>

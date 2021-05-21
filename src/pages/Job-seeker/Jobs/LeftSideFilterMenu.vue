@@ -579,10 +579,8 @@ export default {
   font-size: 16px;
   line-height: 24px;
   /* identical to box height, or 150% */
-
   text-align: center;
   text-decoration-line: underline;
-
   color: #0084f4;
 }
 
@@ -593,11 +591,8 @@ export default {
   font-size: 16px;
   line-height: 24px;
   /* identical to box height, or 150% */
-
   text-align: center;
-
   /* Text / 03 */
-
   color: #8b90a0;
 }
 
@@ -670,7 +665,6 @@ hr {
 .not-selected {
   background: #ffffff;
   /* UI / 05 */
-
   border: 1px solid #a1a4b1;
   color: #8b90a0;
 }
@@ -719,14 +713,12 @@ hr {
   background: #fafafa;
   height: 220px;
   padding-top: 15px;
-  /* margin-left: 10px; */
 }
 
 .experience-block {
   background: #fafafa;
   height: 140px;
   padding-top: 15px;
-  /* margin-left: 10px; */
 }
 
 .company-size-block {
@@ -739,14 +731,12 @@ hr {
   background: #fafafa;
   height: 170px;
   padding-top: 15px;
-  /* margin-left: 10px; */
 }
 
 .time-posted-block {
   background: #fafafa;
   height: 160px;
   padding-top: 15px;
-  /* margin-left: 10px; */
 }
 
 .expand-transition {

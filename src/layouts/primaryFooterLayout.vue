@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import FooterCard from '../pages/common-components/FooterCard';
-import Header from '../pages/common-components/Header.vue';
+import FooterCard from '../pages/components/FooterCard';
+import Header from '../pages/components/Header.vue';
 
 export default {
   name: 'App',

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import JobCards from '../../common-components/JobCards.vue';
+import JobCards from '../../components/JobCards.vue';
 import TopHiringCompaniesCards from './TopHiringCompaniesCards.vue';
 
 export default {
@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style scoped>
+
 .pading-top-20px-right-80px {
   padding-top: 20px;
   padding-right: 80px;

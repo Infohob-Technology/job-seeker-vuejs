@@ -722,9 +722,7 @@ ul, p, ul li {
 }
 
 @media screen and (max-width: 380px) {
-  /* .busy-head{
-   font-size:20px;
-  }   */
+
 }
 
 </style>

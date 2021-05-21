@@ -47,10 +47,8 @@ export default {};
   font-size: 16px;
   letter-spacing: 1px;
   /* identical to box height, or 16px */
-
   align-items: center;
   text-align: center;
-
   color: #ffffff;
 }
 
@@ -85,10 +83,8 @@ export default {};
   font-size: 48px;
   line-height: 120%;
   /* identical to box height, or 58px */
-
   letter-spacing: 1px;
   text-transform: capitalize;
-
   color: #222222;
 }
 
@@ -97,13 +93,11 @@ export default {};
   border-radius: 2px;
   padding: 10px 20px;
   color: #8b90a0;
-  /*font-family: SF UI Display;*/
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
   /* identical to box height, or 20px */
-
   letter-spacing: 0.04em;
   text-transform: capitalize;
 

@@ -279,19 +279,6 @@ export default {
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
 
-/*body {*/
-/*  background-color: #2979FF;*/
-
-/*}*/
-
-/*.container {*/
-/*  width: 100%;*/
-/*  color: #0385F3;*/
-/*  !*background: #2979FF;*!*/
-/*  font-family: 'Roboto', sans-serif;*/
-/*  margin-top: 20%;*/
-/*}*/
-
 .progressbar {
   counter-reset: step;
   width: 800px;
@@ -343,12 +330,6 @@ export default {
   background-color: #5AAADF;
   color: #ffffff;
   content: "✔";
-}
-
-.progressbar li.active + li:after {
-  /*   background:  #00E676; */
-  /*   border-bottom: 1px dashed */
-  /*border-color: #00E676;*/
 }
 
 .container-fluid {

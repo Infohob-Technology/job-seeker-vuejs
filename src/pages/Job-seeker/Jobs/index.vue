@@ -22,7 +22,7 @@
 
 <script>
 
-import Header from '../../common-components/Header.vue';
+import Header from '../../components/Header.vue';
 import LeftSideMenu from './LeftSideFilterMenu';
 import RightSideFeaturedJobs from './RightSideFeaturedJobs.vue';
 import MiddleJobsSection from './MiddleJobsSection.vue';
@@ -69,10 +69,7 @@ export default {
 }
 
 .steps-content {
-  /* margin-top: 16px; */
-  /* border: 1px dashed #e9e9e9; */
   border-radius: 6px;
-  /* background-color: #fafafa; */
   min-height: 200px;
   display: flex;
   text-align: center;

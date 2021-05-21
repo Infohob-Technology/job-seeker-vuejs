@@ -59,7 +59,7 @@ let router = new Router({
         {
           path: '/admin/job-seeker',
           name: 'AdminJobSeeker',
-          component: () => import('../pages/admin-job-seeker'),
+          component: () => import('../pages/admin/job-seeker'),
           meta: {
             requiresAuth: true,
           },
@@ -75,7 +75,7 @@ let router = new Router({
         {
           path: '/admin/job-seeker/:id',
           name: 'AdminJobSeekerDetailedPage',
-          component: () => import('../pages/admin-job-seeker/job-seeker-detailed-view'),
+          component: () => import('../pages/admin/job-seeker-detail'),
           meta: {
             requiresAuth: true,
           },

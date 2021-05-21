@@ -195,7 +195,6 @@ export default {
   display: flex;
   align-items: center;
   overflow: hidden;
-  /*background-color: "#FAFAFA";*/
   padding: 10px 100px;
   height: 80px;
   background: #232c3a;
@@ -214,20 +213,10 @@ export default {
 
 .footer-container {
   padding: 30px 80px;
-  /*display: flex;*/
-  /*justify-content: space-between;*/
-  /*align-items: center;*/
-  /*flex-wrap: wrap;*/
 }
 
 .footer-section {
-  /*flex: 0 1 400px;*/
   margin: 10px 40px;
-}
-
-.footer-section:first-child {
-  /*flex: 0 1 500px;*/
-
 }
 
 .footer-text {

@@ -273,8 +273,6 @@ hr {
 }
 
 .searchbox-style {
-  /* width: 700px; */
-  /*; */
   width: 100%;
   border-radius: 4px;
   background: #ffffff;

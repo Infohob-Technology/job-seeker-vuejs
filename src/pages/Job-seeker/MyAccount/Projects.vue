@@ -140,8 +140,6 @@ style scoped >
 
 .list_ {
   list-style: none;
-  /*display: inline;*/
-  /*margin-left: -38px;*/
   padding-left: 0;
   display: flex;
   justify-content: space-between;

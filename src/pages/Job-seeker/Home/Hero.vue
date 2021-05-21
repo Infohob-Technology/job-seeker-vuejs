@@ -255,9 +255,6 @@ export default {
   font-weight: 500;
   font-size: 14px;
   line-height: 160%;
-  /* or 22px */
-
-  /* display: flex; */
   align-items: center;
 
   color: #4affae;
@@ -433,19 +430,14 @@ hr {
   flex-direction: column;
   align-items: center;
   padding: 16px 0px;
-
-  /* position: absolute; */
-  /* width: 400px; */
   height: 114px;
   left: 20px;
   top: 211px;
-
   background: #eafff6;
   border-radius: 8px;
 }
 
 .profile-box-parent {
-  /*margin-top: 72px;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -456,7 +448,6 @@ hr {
 }
 
 .profile-box {
-  /*max-height: 440px;*/
   border: 1px solid #f0f1f3;
   max-width: 440px;
   width: 100%;
@@ -551,7 +542,6 @@ hr {
     -webkit-appearance: none;
     height: 10px;
     cursor: ew-resize;
-    /* background: #434343; */
     box-shadow: -80px 0 0 80px #01e37e;
   }
 }
@@ -638,12 +628,6 @@ input[type="range"]::-ms-fill-upper {
   .profile-completeness-text {
     font-size: 12px;
   }
-
-  .profile-box {
-    /*width: 280px;*/
-    /*height: 390px;*/
-  }
-
   .left-side-search-box {
     width: 100%;
     padding: 30px 0px;
@@ -652,10 +636,6 @@ input[type="range"]::-ms-fill-upper {
 
   .past-searches-result {
     padding: 8px 15px;
-  }
-
-  .profile-box-parent {
-    /*margin-top: 25px;*/
   }
 }
 
@@ -720,15 +700,10 @@ input[type="range"]::-ms-fill-upper {
 
   .profile-box {
     width: 280px;
-    /*height: 390px;*/
   }
 
   .left-side-search-box {
     width: 640px;
-  }
-
-  .profile-box-parent {
-    /*margin-top: 25px;*/
   }
 }
 
@@ -738,23 +713,7 @@ input[type="range"]::-ms-fill-upper {
   background-size: cover;
   background-repeat-y: no-repeat;
   padding: 60px 80px;
-  /*display:flex;*/
-  /*!* flex-wrap: wrap; *!*/
-  /*flex-direction: column;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
 }
-
-.hero-section .child1 {
-  /*flex:0 1 824px!important;*/
-  /*margin-right:56px;*/
-}
-
-.hero-section .child2 {
-  /*flex:0 1 440px!important;*/
-  /*margin:72px 0px;*/
-}
-
 .search-btn-group {
   display: flex;
   flex-wrap: wrap;
@@ -853,17 +812,6 @@ input[type="range"]::-ms-fill-upper {
     background: none;
     display: block;
   }
-
-  .search-btn1,
-  .search-btn2 {
-    /*flex: none;*/
-    /*margin-bottom: 4px;*/
-  }
-
-  .search-button-style {
-    /*width: 100%;*/
-    /*margin: 0;*/
-  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -880,7 +828,6 @@ input[type="range"]::-ms-fill-upper {
     display: flex;
     flex-direction: column;
     flex: none;
-    /*padding: 10px;*/
   }
 
   .search-btn1,

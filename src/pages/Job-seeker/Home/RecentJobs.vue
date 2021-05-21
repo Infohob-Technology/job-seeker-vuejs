@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import JobCards from '../../common-components/JobCards.vue';
+import JobCards from '../../components/JobCards.vue';
 
 export default {
   components: {JobCards},

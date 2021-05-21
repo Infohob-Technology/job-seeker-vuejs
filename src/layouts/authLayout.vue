@@ -7,7 +7,7 @@
 
 <script>
 
-import Header from '../pages/common-components/Header.vue';
+import Header from '../pages/components/Header.vue';
 import {store} from '../store/store';
 
 export default {

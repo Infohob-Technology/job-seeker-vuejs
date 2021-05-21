@@ -185,8 +185,6 @@ hr {
 }
 
 .searchbox-style {
-  /* width: 700px; */
-  /* height: 48px; */
   border-radius: 4px;
   background: #ffffff;
   color: #8b90a0;

@@ -220,7 +220,7 @@
   </div>
 </template>
 <script>
-import AddJobSeeker from './AddJobSeeker';
+import AddJobSeeker from './components/AddJobSeeker';
 
 const columns = [
   {
@@ -523,24 +523,14 @@ export default {
 
 .action-box-job-seeker {
   background: #fafafc;
-
-
   border: 1px solid #f0f1f3;
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  /*!*font-family: Open Sans;*!*/
-  /*font-style: normal;*/
-  /*font-weight: 600;*/
-  /*font-size: 16px;*/
-  /*!* text-align: center; *!*/
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  /*!* align-items: unset; *!*/
-  /*vertical-align: middle;*/
-
 }
 
 .action-box-job-seeker.success {
@@ -564,7 +554,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* align-items: unset; */
   vertical-align: middle;
 }
 
@@ -611,7 +600,6 @@ export default {
 
 .searchbox-style {
   width: 420px;
-  /* height: 48px; */
   border-radius: 4px;
   background: #ffffff;
   color: #8b90a0;
@@ -653,10 +641,6 @@ export default {
 .text-align-initial {
   margin: 3px 40px;
 }
-
-/* .ant-tabs{
-  overflow: auto!important;
-} */
 th {
   min-width: 150px !important;
 }

@@ -8,8 +8,8 @@
 
 <script>
 
-import Header from '../pages/common-components/Header.vue';
-import Footer from '@/pages/common-components/Footer.vue';
+import Header from '../pages/components/Header.vue';
+import Footer from '@/pages/components/Footer.vue';
 
 export default {
   name: 'SmallFooterLayout',

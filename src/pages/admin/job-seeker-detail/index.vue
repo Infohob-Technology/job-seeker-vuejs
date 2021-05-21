@@ -41,11 +41,11 @@
 </template>
 
 <script>
-import ProfileInformationTab from './ProfileInformationTab.vue';
-import Education from './Education_in_MyAccount';
-import Experience from './Experience_and_Skills';
-import Projects from './Projects';
-import Resume from './Resume_CV';
+import ProfileInformationTab from './components/ProfileInformationTab.vue';
+import Education from './components/Education_in_MyAccount';
+import Experience from './components/Experience_and_Skills';
+import Projects from './components/Projects';
+import Resume from './components/Resume_CV';
 
 export default {
   components: {ProfileInformationTab, Education, Experience, Projects, Resume},

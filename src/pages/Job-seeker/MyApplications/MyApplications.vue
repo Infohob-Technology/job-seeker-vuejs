@@ -285,18 +285,7 @@ export default {
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
 
-/*body {*/
-/*  background-color: #2979FF;*/
 
-/*}*/
-
-/*.container {*/
-/*  width: 100%;*/
-/*  color: #0385F3;*/
-/*  !*background: #2979FF;*!*/
-/*  font-family: 'Roboto', sans-serif;*/
-/*  margin-top: 20%;*/
-/*}*/
 .btn {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -309,16 +298,12 @@ export default {
   width: 100%;
   display: grid;
   grid-template-columns: 160px 1fr 160px 1fr 160px;
-  /*flex-wrap: wrap;*/
-  /*justify-content: space-around;*/
-  /*justify-content: center;*/
 }
 
 .progressbar li {
   width: 160px;
   position: relative;
   list-style: none;
-  /*float: left;*/
   text-align: center;
 }
 
@@ -334,34 +319,15 @@ export default {
   margin: 0 auto 10px auto;
   border-radius: 50%;
   background-color: white;
-  /* Center # in circle */
   line-height: 30px;
 }
 
-.progressbar li:after {
-  /*content: "";*/
-  /*position: absolute;*/
-  /*width: 100%;*/
-  /*height: 0px;*/
-  /*!*   background: orange ; *!*/
-  /*top: 50%; !*half of height Parent (li) *!*/
-  /*transform: translateY(-50%);*/
-  /*left: -100%;*/
-  /*z-index: -1;*/
-  /*border: 1px solid;*/
-  /*border-color: #5AAADF;*/
-}
 
 .progressbar > span {
   width: 100%;
   height: 0px;
   display: inline-block;
   align-self: center;
-  /*   background: orange ; */
-  /*top: 50%; !*half of height Parent (li) *!*/
-  /*transform: translateY(-50%);*/
-  /*left: -100%;*/
-  /*z-index: -1;*/
   border: 1px solid;
   border-color: #5AAADF;
 }
@@ -374,12 +340,6 @@ export default {
   background-color: #5AAADF;
   color: #ffffff;
   content: "✔";
-}
-
-.progressbar li.active + li:after {
-  /*   background:  #00E676; */
-  /*   border-bottom: 1px dashed */
-  /*border-color: #00E676;*/
 }
 
 .container-fluid {
@@ -423,21 +383,17 @@ export default {
   padding: 20px;
   margin: 5px;
   background: #FAFDFF;
-  /* 8px */
 }
 
 .card-flex {
-  /*margin-left:50px;*/
   padding: 0 80px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
-  /*flex-wrap: wrap;*/
 }
 
 .flex-child1 {
-  /*flex:0 1 491px;*/
   margin-right: 50px;
   max-width: 491px;
   width: 100%;
@@ -445,7 +401,6 @@ export default {
 
 .flex-child2 {
   width: 100%;
-  /*flex:0 1 720px;*/
 }
 
 .job-status-container {
@@ -462,7 +417,6 @@ export default {
 }
 
 .tab-p {
-  /*padding-left: 40px;*/
   padding: 0 80px;
 }
 
@@ -488,7 +442,6 @@ export default {
 
 @media screen and (max-width: 768px) {
   .card-flex {
-    /*margin:10px 20px;*/
     padding: 10px 20px;
   }
 
@@ -506,7 +459,6 @@ export default {
   }
 
   .progressbar {
-    /*justify-content: center;*/
     grid-template-columns: 1fr;
   }
 

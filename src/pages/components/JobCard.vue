@@ -117,7 +117,6 @@ hr {
 }
 
 .job-title {
-  /*font-family: Larsseit;*/
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

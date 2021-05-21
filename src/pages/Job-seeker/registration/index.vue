@@ -64,7 +64,7 @@
 <script>
 
 import ProfileSummary from './ProfileSummary';
-import Header from '../../common-components/Header.vue';
+import Header from '../../components/Header.vue';
 import EducationDetails from './EducationDetails.vue';
 import ExperienceDetails from './ExperienceDetails.vue';
 import Projects from './Projects.vue';
@@ -163,10 +163,7 @@ export default {
 }
 
 .steps-content {
-  /* margin-top: 16px; */
-  /* border: 1px dashed #e9e9e9; */
   border-radius: 6px;
-  /* background-color: #fafafa; */
   min-height: 200px;
   display: flex;
   text-align: center;

@@ -24,9 +24,6 @@
     </div>
     <div class="row">
       <div class="progression-content">
-        <!--      <section v-if="tab == 1">-->
-        <!--        <index_myAccount/>-->
-        <!--      </section>-->
         <section v-if="tab == 1">
           <ProfileSummery/>
         </section>
