@@ -38,7 +38,7 @@
 
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-5">
                 <div class="footer-text mt-24">
                   <router-link to="/"><span class="post-finds-jobs-in"> Sr. Sales Manager </span></router-link>
                 </div>

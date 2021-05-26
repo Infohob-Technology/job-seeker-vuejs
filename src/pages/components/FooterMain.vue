@@ -1,7 +1,7 @@
 <template>
   <div class="background-footer">
     <div
-      class="footer-main display-flex flex-column flex-sm-row justify-content-space-between align-item-center"
+      class="footer-main d-flex flex-column flex-sm-row justify-content-space-between align-item-center"
     >
       <div class="mb-2 mb-sm-0">
         <div>
@@ -14,7 +14,7 @@
       <div class="mb-2 mb-sm-0">
         <span class=" copy-right-text">© Copyright 2020 Infohob</span>
       </div>
-      <div class="display-flex justify-content-space-between">
+      <div class="d-flex justify-content-space-between">
         <div class="border-box-images">
           <img src="@/assets/fb.png"/>
         </div>

@@ -79,9 +79,12 @@ export default {
   display: flex;
   align-items: center;
 }
-.ant-tabs-bar ,.ant-tabs-bar ,.ant-tabs-top-bar ,.ant-tabs-small-bar{
+.job-seeker-listing-tabs .ant-tabs-bar{
   width: 277px!important;
   margin-left: 40px;
+}
+.reset-password .ant-tabs-bar{
+  width: 325px!important;
 }
 .ant-table-thead tr{
   border: 1px solid #F0F1F3!important;
@@ -153,6 +156,22 @@ export default {
 .login-button-style {
   background: #0385f3;
   color: #fff;
+}
+.ant-collapse-header i{
+    color:#0084F4!important;
+}
+.ant-collapse-header{
+  padding:24px 54px!important;
+  font-weight: 600;
+  font-size:18px;
+  color:#505565!important;
+}
+.ant-collapse-arrow{
+    color:#0084F4!important;
+}
+.quesiton-collapse .ant-collapse-item{
+  border-bottom: 1px solid #0084F4!important;
+  color:#0084F4!important;
 }
 @import "~bootstrap/dist/css/bootstrap.css";
 </style>
