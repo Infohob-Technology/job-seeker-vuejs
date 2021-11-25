@@ -20,13 +20,13 @@
       <hr/>
     </div>
     <div
-      class="display-flex mt-20px flex-sm-row flex-column align-item-center justify-content-space-around"
+      class="pl-2 display-flex mt-20px flex-sm-row flex-column align-item-center justify-content-space-between"
     >
-      <div>
-        <div class="border-browser-job text-center">Browse Job</div>
-      </div>
       <div class="mt-2 mt-sm-0">
         <span class="posted-ago-date-text"> Posted 2 days ago </span>
+      </div>
+      <div>
+        <div class="mr-2 view-detail">View details <img src="@/assets/arrow-right (1).png" alt="logo"></div>
       </div>
     </div>
   </div>
@@ -47,7 +47,14 @@ export default {};
   margin-left: 10px;
   margin-right: 10px;
 }
-
+.view-detail{
+  font-style: SemiBold;
+  font-size: 14px;
+  Line-height: 16px;
+  Letter-spacing: 0.5px;
+  color:'#141414';
+  cursor: pointer;
+}
 .posted-ago-date-text {
   font-style: normal;
   font-weight: 500;

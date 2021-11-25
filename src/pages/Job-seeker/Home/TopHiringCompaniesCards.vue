@@ -5,8 +5,8 @@
       <div
         class=" align-item-center justify-content-space-around text-center"
       >
-        <div class="text-align-left padding-right-20px">
-          <img src="@/assets/bookmark.png"/>
+        <div class="text-align-left follow">
+          Follow
         </div>
         <div>
           <img
@@ -19,14 +19,15 @@
           <span class="companies-name-logo"> Google Inc. </span>
         </div>
       </div>
+      <p class="new-jobs-p mb-0 mt-1">12 new jobs</p>
     </div>
 
     <div class="jobs-cards">
       <div
         class="align-item-center justify-content-space-around text-center"
       >
-        <div class="text-align-left padding-right-20px">
-          <img src="@/assets/bookmark.png"/>
+        <div class="text-align-left follow">
+          Follow
         </div>
         <div>
           <img
@@ -38,14 +39,15 @@
           <span class="companies-name-logo"> AT&T Inc. </span>
         </div>
       </div>
+      <p class="new-jobs-p mb-0 mt-1">12 new jobs</p>
     </div>
 
     <div class="jobs-cards">
       <div
         class=" align-item-center justify-content-space-around text-center"
       >
-        <div class="text-align-left padding-right-20px">
-          <img src="@/assets/bookmark.png"/>
+        <div class="text-align-left follow">
+          Follow
         </div>
         <div>
           <img src="@/assets/dell.png"/>
@@ -54,14 +56,16 @@
           <span class="companies-name-logo"> Dell </span>
         </div>
       </div>
+      <p class="new-jobs-p mb-0 mt-1">12 new jobs</p>
     </div>
 
     <div class="jobs-cards">
       <div
         class=" align-item-center justify-content-space-around text-center"
       >
-        <div class="text-align-left padding-right-20px">
-          <img src="@/assets/bookmark.png"/>
+        <div class="text-align-left follow">
+          <!-- <img src="@/assets/bookmark.png"/> -->
+          Follow
         </div>
         <div>
           <img
@@ -74,6 +78,7 @@
           <span class="companies-name-logo"> Google Inc. </span>
         </div>
       </div>
+      <p class="new-jobs-p mb-0 mt-1">12 new jobs</p>
     </div>
   </div>
 </template>
@@ -128,6 +133,17 @@ export default {};
   box-shadow: 0px 4px 60px rgba(53, 66, 85, 0.04);
   border-radius: 10px;
   padding: 22px;
+}
+
+.new-jobs-p{
+  text-align: center;
+  font-style: Medium;
+  font-size: 13px;
+  color: #61CF5D;
+}
+
+.follow{
+  font-size: 13px;
 }
 
 @media only screen and (max-width: 530px) {

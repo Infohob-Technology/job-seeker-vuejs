@@ -79,7 +79,7 @@
               <div class="search-btn1">
                 <a-form-item>
                   <a-button
-                    :disabled="hasErrors(form.getFieldsError())"
+                    
                     class="search-button-style"
                     html-type="submit"
                     type="primary"
