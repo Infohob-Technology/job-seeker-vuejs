@@ -14,6 +14,10 @@
 
     <div class="mb-50">
       <job-cards/>
+
+      <div class="">
+        <button class="view-more-btn">View more</button>
+      </div>
     </div>
   </div>
 </template>
@@ -71,6 +75,18 @@ export default {
   background: #0575d4;
 }
 
+.view-more-btn{
+  border: 1px solid #000;
+  padding: 5px 10px;
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  color: #000;
+}
 .mb-50 {
   margin-bottom: 50px;
 }

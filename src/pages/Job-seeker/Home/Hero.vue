@@ -1,10 +1,10 @@
 <template>
   <div class="row hero-section">
-    <div class="left-side-search-box col-lg-8 child1">
+    <div class="left-side-search-box col-lg-12 child1">
       <div class="title-font">
-        <span> Aenean euismod bibendum laoreet </span>
+        <span class="text-center"> Aenean euismod bibendum laoreet </span>
       </div>
-      <div class="second-title">
+      <div class="second-title text-center">
         <span>
           Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
           accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.
@@ -123,7 +123,7 @@
       </div>
     </div>
     <!-- display-non-tablet -->
-    <div class="profile-box-parent col-lg-4 child2">
+  <!--   <div class="profile-box-parent col-lg-4 child2">
       <div class="ml-auto profile-box">
         <div class="display-flex align-item-center">
           <div>
@@ -186,7 +186,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </template>
@@ -461,6 +461,7 @@ hr {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .second-title {
