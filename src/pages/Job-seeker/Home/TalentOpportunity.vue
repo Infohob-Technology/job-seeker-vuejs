@@ -1,6 +1,6 @@
 <template>
   <div class="card-container">
-    <div class="card-child text-center">
+    <!-- <div class="card-child text-center">
       <div><span class="category-box">Companies</span></div>
       <div class="mt-40 need-talent-text">
         <span> need talent? </span>
@@ -8,8 +8,8 @@
       <div class="mt-30">
         <button class="get-started-now">Get Started Now</button>
       </div>
-    </div>
-    <div class="vertical"></div>
+    </div> -->
+    <!-- <div class="vertical"></div> -->
     <div class="card-child text-center">
       <div><span class="category-box">Talent</span></div>
       <div class="mt-40 need-talent-text">

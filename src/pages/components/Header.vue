@@ -200,6 +200,10 @@ a {
   width: 100%;
 }
 
+.login-button, .logout-button {
+  background: #0385f3 !important;
+}
+
 @media screen and (max-width: 500px) {
   a {
     float: none;
