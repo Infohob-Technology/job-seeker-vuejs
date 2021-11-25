@@ -11,7 +11,8 @@
         <div>
           <img
             class="image-tablet-height"
-            src="@/assets/ibm.png"
+            src="@/assets/google-icon.png"
+            width="50px"
           />
         </div>
         <div class="pb-15">
@@ -65,7 +66,8 @@
         <div>
           <img
             class="image-tablet-height"
-            src="@/assets/ibm.png"
+            src="@/assets/Rectangle 11 (2).png"
+            
           />
         </div>
         <div class="pb-15">

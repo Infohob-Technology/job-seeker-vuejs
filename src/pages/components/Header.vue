@@ -70,7 +70,7 @@ export default {
     return {
       msg: "Welcome to Your Vue.js App",
       nav_state: false,
-      isLogin: true,
+      isLogin: false,
     };
   },
   watch: {
