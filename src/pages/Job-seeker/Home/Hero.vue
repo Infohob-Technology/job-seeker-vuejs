@@ -332,7 +332,7 @@ export default {
   border: 1px solid #f0f1f3;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-  max-width: 840px;
+  width: 80%;
 }
 
 .no-of-opening {
@@ -722,13 +722,13 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .search-btn1 {
-  flex: 1 1 100px;
+  flex: 1 1 15%;
 
 
 }
 
 .search-btn2 {
-  flex: 2 2 200px;
+  flex: 2 2 30%;
 
 }
 
@@ -778,9 +778,6 @@ input[type="range"]::-ms-fill-upper {
     height: unset;
   }
 
-  .search-box-all {
-    max-width: 600px;
-  }
 
   .profile-box-parent {
     justify-content: flex-end;
