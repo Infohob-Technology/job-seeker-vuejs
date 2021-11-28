@@ -147,7 +147,7 @@ hr {
 }
 
 .jobs-cards {
-  margin: 10px;
+  margin: 20px;
   flex: 1 1 250px;
   border: 1px solid #f0f1f3;
   transition: all 0.3s ease-in-out;
