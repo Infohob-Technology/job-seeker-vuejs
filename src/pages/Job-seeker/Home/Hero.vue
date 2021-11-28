@@ -713,7 +713,7 @@ input[type="range"]::-ms-fill-upper {
   background-image: url('../../../assets/Header2x.jpg');
   background-size: cover;
   background-repeat-y: no-repeat;
-  padding: 60px 80px;
+  padding: 100px 80px;
 }
 .search-btn-group {
   display: flex;

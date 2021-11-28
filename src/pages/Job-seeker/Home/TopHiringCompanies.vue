@@ -1,6 +1,6 @@
 <template>
   <div class="mt-110 background-color-light">
-    <div class="pt-60 text-center  mb-4">
+    <div class="pt-60 text-center pb-30 mb-4">
       <span class="label-top-hiring-companie">Top Hiring Companies</span>
     </div>
     <div class="pb-50">
@@ -58,6 +58,9 @@ export default {
   margin-left: 10px;
 }
 
+.pb-30{
+  padding-bottom: 30px;
+}
 .pb-50 {
   padding-bottom: 50px;
 }
