@@ -1,18 +1,8 @@
 <template>
   <div class="mt-100">
-    <div class="header">
-      <div class="header-right">
-        <a class="active" href="#home">About us</a>
-        <a href="#jobs">Terms & Conditions</a>
-        <a href="#my-application">Privacy Policy</a>
-        <a href="#my-account">Blog</a>
-        <a href="#my-account">Reviews</a>
-        <a href="#my-account">Careers</a>
-        <a href="#my-account">Contact us</a>
-      </div>
-    </div>
+    
     <div
-      class="border-bottom pt-48px background-grey footer-container"
+      class="pt-48px background-grey footer-container"
     >
       <div class="row justify-content-between">
         <div class="col-md-6">
@@ -119,6 +109,18 @@
 
 
     </div>
+    <div class="header background-grey">
+      <div class="header-right">
+        <a class="active" href="#home">About us</a>
+        <a href="#jobs">Terms & Conditions</a>
+        <a href="#my-application">Privacy Policy</a>
+        <a href="#my-account">Blog</a>
+        <a href="#my-account">Reviews</a>
+        <a href="#my-account">Careers</a>
+        <a href="#my-account">Contact us</a>
+      </div>
+    </div>
+
     <footer-main/>
   </div>
 </template>
@@ -197,7 +199,7 @@ export default {
   overflow: hidden;
   padding: 10px 100px;
   height: 80px;
-  background: #232c3a;
+  
 }
 
 .header a {

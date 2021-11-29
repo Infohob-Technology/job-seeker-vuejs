@@ -64,7 +64,8 @@ export default {};
 }
 
 .background-footer {
-  background: #354255;
+  /* background: #354255; */
+  background: #141414;
 }
 
 .ml-100px {
